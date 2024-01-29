@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Architecture Deep Dive
 
-Kakarot is a zkEVM built in [Cairo](https://www.cairo-lang.org/), the provable language that powers [Starknet](https://starkware.co/starknet/). It’s an Layer 2, a [so-called zkRollup](https://ethereum.org/developers/docs/scaling/zk-rollups). It’s Ethereum compatible, now and forever. Beyond compatibility, Kakarot strives to add new features such as native account abstraction. Kakarot's driving ethos is to _Prove, Scale and Innovate_.
+Kakarot is a zkEVM built in [Cairo](https://www.cairo-lang.org/), the provable language that powers [Starknet](https://starkware.co/starknet/) and all the StarknetOS chains (also called CairoVM chains, or Starknet appchains). It’s an Layer 2, a [so-called zkRollup](https://ethereum.org/developers/docs/scaling/zk-rollups). It’s Ethereum compatible, now and forever. Beyond compatibility, Kakarot strives to add new features such as native account abstraction. Kakarot's driving ethos is to _Prove, Scale and Innovate_.
 
 In concrete terms:
 
