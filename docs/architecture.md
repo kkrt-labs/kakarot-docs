@@ -31,8 +31,14 @@ Deterministic: The EVM is deterministic, meaning that a smart contract will prod
 
 TL;DR - the EVM is the common computer used to run logic on the Ethereum network and hold all user state (balances, contract code, etc.).
 
+---
+
+Diagram - The EVM Illustrated by Takenobu:
+
 ![The EVM illustrated by Takenobu](../static/diagrams/evm_takenobu.png)
 Source: The EVM illustrated, https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf
+
+---
 
 ### What is a zk-Rollup?
 
@@ -68,7 +74,13 @@ Cairo is essentially a high-level abstraction to write provable software. It is 
 
 Kakarot - the network - is composed of three parts: a set of Cairo programs (the Core EVM), an RPC layer (RPC server and EVM indexer) and an underlying CairoVM client (a StarknetOS chain).
 
+---
+
+Diagram - Kakarot zkEVM high-level architecture:
+
 ![Kakarot zkEVM architecture diagram](../static/diagrams/kakarot_zkevm.png)
+
+---
 
 TL;DR - whatever is written in Cairo can be proven. Kakarot implements the EVM specification, in Cairo. It is provable by design.
 
@@ -80,6 +92,12 @@ Kakarot zkEVM is probably the most high-level zkEVM. On the scale of maths langu
 - Cairo (through Starknet) is an ecosystem of its own and Kakarot can benefit from all innovations that are created there with ease: parallel execution, face ID signature validation, Celestia DA integration and more.
 
 TL;DR - By betting on the CairoVM for the years to come, Kakarot synergizes with the entire Cairo (and thus Starknet) ecosystem. Cairo is the most advanced high-level zk-toolbox in production (has been in production for years with StarkEx).
+
+---
+
+Diagram - How to build a zkEVM:
+
+![Different ways to build a zkEVM: low-level circuits or intermediary zkVM](../static/diagrams/how_to_build_a_zkevm.png)
 
 ## More information
 

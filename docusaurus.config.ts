@@ -38,7 +38,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/kkrt-labs/kakarot-docs.git',
+          editUrl: 'https://github.com/kkrt-labs/kakarot-docs/edit/main',
         },
         blog: false,
         theme: {
@@ -65,7 +65,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/kkrt-labs/kakarot',
           label: 'GitHub',
           position: 'right',
         },

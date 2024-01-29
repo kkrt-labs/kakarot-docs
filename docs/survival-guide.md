@@ -6,10 +6,10 @@ sidebar_position: 1
 
 ## Useful links
 
-- Faucet: https://testnet.kakarot.org/faucet
-- Block Explorer: https://testnet.kakarot.org/explorer
-- Public RPC: https://testnet.kakarot.org/rpc
-- Registration Page (for invite-only phase of the Kakarot Alpha Testnet): https://testnet.kakarot.org/signup
+- Faucet: https://faucet.testnet.kakarot.org
+- Block Explorer: https://explorer.testnet.kakarot.org
+- Public RPC: https://rpc.testnet.kakarot.org
+- Registration Page (for invite-only phase of the Kakarot Alpha Testnet): https://signup.testnet.kakarot.org
 - Discord: https://discord.gg/kakarotzkevm
 - Twitter: https://twitter.com/kakarotzkevm
 - Official Website: https://kakarot.org
