@@ -66,6 +66,8 @@ TL;DR: Execute Ethereum-compatible transactions on a Layer 2, prove them off-cha
 
 ## How does Kakarot work under the hood?
 
+### Kakarot is a set of Cairo programs that emulate the EVM
+
 Under the hood, Kakarot zkEVM is a set of Cairo programs that implement the EVM instruction set. The EVM is the blueprint, Kakarot implements it in Cairo.
 
 > Cairo is the first Turing-complete language for creating provable programs for general computation.
@@ -73,6 +75,31 @@ Under the hood, Kakarot zkEVM is a set of Cairo programs that implement the EVM 
 Cairo is essentially a high-level abstraction to write provable software. It is a "zk-toolbox". There is a "need": execute off-chain, verify on-chain. There is a requirement: respect the EVM blueprint. There is a tool: Cairo.
 
 Kakarot - the network - is composed of three parts: a set of Cairo programs (the Core EVM), an RPC layer (RPC server and EVM indexer) and an underlying CairoVM client (a StarknetOS chain).
+
+### Kakarot relies on an underlying (invisible) StarknetOS client
+
+The Kakarot core EVM, i.e. the set of Cairo programs that implement the EVM, are deployed on an underlying StarknetOS chain. This means that Kakarot is running as a set of Cairo smart contracts on a CairoVM-powered chain. Nevertheless, this CairoVM chain is "invisible" to the user. Users only interact with Kakarot through the RPC layer in an Ethereum-compatible way. The only exposed interface in Kakarot zkEVM is the Ethereum JSON-RPC specification.
+
+---
+
+Diagram - Kakarot RPC Layer
+
+![Kakarot RPC Layer](../static/diagrams/kakarot_rpc.png)
+
+---
+
+To put it simply, Kakarot L2 is composed of an underlying StarknetOS chain that runs a Cairo program that emulates the EVM and an RPC layer to allow users to interact with it in an Ethereum format. All Cairo execution traces are provable by design, which allows Kakarot to batch blocks and submit proofs to L1 using the Starkware Shared prover (SHARP).
+
+In Kakarot zkEVM, the design choices for Cairo programs and their EVM equivalents are the following. **🎙️ Disclaimer 🎙️: all these designs choices are invisible to the user**:
+
+- each EVM smart contract (so-called _Account Contract_) is deployed as a unique Starknet smart contract, which stores its own bytecode and EVM storage slots.
+- each EVM user-owned account (so-called _Externally Owned Account (EOA)_) is deployed as a Starknet smart contract wallet.
+  - It has a Starknet formatted address (31 bytes hex string), which is uniquely mapped to the user EOA EVM address (20 bytes hex string).
+  - Its native balance in ETH (coin vs. token) is denominated in ERC20 native token under the hood in the Kakarot system.
+  - It behaves exactly like an EOA, uses the same signature and validation scheme as Ethereum mainnet, though it can be extended in the future to support innovative features!
+- EVM transactions that are sent by users are wrapped in Starknet transactions. The derived EVM Transaction hashes are mapped 1-to-1 with underlying Starknet transaction hashes. Since signature verification is done in a Cairo program, transactions are provably processed with integrity [despite being wrapped at the RPC level](https://github.com/kkrt-labs/kakarot-rpc/blob/bcadfc9b38ac934f73832b3a3485c15f08d66218/src/eth_rpc/servers/eth_rpc.rs#L236).
+- new state roots are computed using Pedersen hash and not keccak because of the zk-unfriendliness of keccak. This does not hurt EVM compatibility at the applicative level.
+- the state trie is computed using Pedersen MPT and not [Keccak MPT](https://ethereum.org/developers/docs/data-structures-and-encoding/patricia-merkle-trie). Note that the transaction trie and receipt trie are both computed as keccak MPTs, for block explorers, but as pedersen MPTs for the proof commitment.
 
 ---
 
@@ -99,6 +126,6 @@ Diagram - How to build a zkEVM:
 
 ![Different ways to build a zkEVM: low-level circuits or intermediary zkVM](../static/diagrams/how_to_build_a_zkevm.png)
 
-## More information
+We believe that in focusing only on engineering, our approach is scalable and sustainable.
 
 <!-- For information unrelated to documentation effort, link to external URLs to decrease the area to maintain: docs should contain doc-related content, and for other content (e.g. how did Kakarot start, what is the roadmap, etc.), use other media -->
