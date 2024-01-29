@@ -23,13 +23,16 @@ Starting from the [Ethereum foundation definition](https://ethereum.org/develope
 
 > Ethereum's state is a large data structure which holds not only all accounts and balances, but a machine state, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
 
-The Ethereum blockchain is a distributed state machine. The [Ethereum Virtual Machine](https://ethereum.org/developers/docs/evm) is a software-based emulation of a physical computer (virtual machine) used to operate (compute state transitions) of the Ethereum blockchain in a deterministic way.
+From the above we get that the Ethereum blockchain is a distributed state machine and that the [Ethereum Virtual Machine](https://ethereum.org/developers/docs/evm) is a software-based emulation of a physical computer (virtual machine) used to operate (compute state transitions) it in a deterministic way.
 
 Execution Environment: The EVM is where smart contracts are executed. Each Ethereum node runs an EVM instance, allowing it to participate in executing and validating smart contracts and transactions.
 
 Deterministic: The EVM is deterministic, meaning that a smart contract will produce the same output given the same input, regardless of which node in the network executes it. This is essential for maintaining consensus across the network.
 
-Conclusion: the EVM is the common computer used to run logic on the Ethereum network and hold all user state (balances, contract code, etc.).
+TL;DR - the EVM is the common computer used to run logic on the Ethereum network and hold all user state (balances, contract code, etc.).
+
+![The EVM illustrated by Takenobu](../static/diagrams/evm_takenobu.png)
+Source: The EVM illustrated, https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf
 
 ### What is a zk-Rollup?
 
@@ -45,7 +48,7 @@ From there is derived the protocols of zk-Rollups. As per the [Ethereum website]
 
 > Zero-knowledge rollups (ZK-rollups) bundle (or 'roll up') transactions into batches that are executed off-chain. Off-chain computation reduces the amount of data that has to be posted to the blockchain. ZK-rollup operators submit a summary of the changes required to represent all the transactions in a batch rather than sending each transaction individually. They also produce validity proofs to prove the correctness of their changes.
 
-TL;DR: execute off-chain, verify on-chain, save on costs.
+TL;DR - execute off-chain, verify on-chain, save on costs.
 
 ### What does it mean to prove the EVM, i.e. how can one go from EVM to zkEVM?
 
@@ -63,16 +66,20 @@ Under the hood, Kakarot zkEVM is a set of Cairo programs that implement the EVM 
 
 Cairo is essentially a high-level abstraction to write provable software. It is a "zk-toolbox". There is a "need": execute off-chain, verify on-chain. There is a requirement: respect the EVM blueprint. There is a tool: Cairo.
 
-TL;DR: whatever is written in Cairo can be proven. Kakarot implements the EVM specification, in Cairo. It is provable by design.
+Kakarot - the network - is composed of three parts: a set of Cairo programs (the Core EVM), an RPC layer (RPC server and EVM indexer) and an underlying CairoVM client (a StarknetOS chain).
 
-## What is the difference between Kakarot and other zkEVMs?
+![Kakarot zkEVM architecture diagram](../static/diagrams/kakarot_zkevm.png)
+
+TL;DR - whatever is written in Cairo can be proven. Kakarot implements the EVM specification, in Cairo. It is provable by design.
+
+## The difference between Kakarot and other zkEVMs
 
 Kakarot zkEVM is probably the most high-level zkEVM. On the scale of maths language and polynomials to human understandable language, Kakarot is closer to human readable language than any other zkEVM. This matters to users in two ways:
 
 - Because Kakarot is built on Cairo, Kakarot as a codebase is extremely slim (an order of magnitude lighter than other zkEVMs) and thus extremely easy to maintain, adapt to Ethereum changes, or add new features to (e.g. native account abstraction).
 - Cairo (through Starknet) is an ecosystem of its own and Kakarot can benefit from all innovations that are created there with ease: parallel execution, face ID signature validation, Celestia DA integration and more.
 
-TL;DR: By betting on the CairoVM for the years to come, Kakarot synergizes with the entire Cairo (and thus Starknet) ecosystem. Cairo is the most advanced high-level zk-toolbox in production (has been in production for years with StarkEx).
+TL;DR - By betting on the CairoVM for the years to come, Kakarot synergizes with the entire Cairo (and thus Starknet) ecosystem. Cairo is the most advanced high-level zk-toolbox in production (has been in production for years with StarkEx).
 
 ## More information
 
