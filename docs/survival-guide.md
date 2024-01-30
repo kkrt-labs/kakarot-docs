@@ -17,6 +17,20 @@ sidebar_position: 2
 - Official Website: https://kakarot.org
 - Kakarot Github Repositories: https://github.com/orgs/kkrt-labs/repositories
 
+  - RPC Layer:
+
+    - RPC Server: https://github.com/kkrt-labs/kakarot-rpc
+    - Indexer (to store EVM data structures): https://github.com/kkrt-labs/kakarot-indexer
+
+  - Cairo Programs (two different EVM implementations):
+    - Cairo Zero Core EVM: https://github.com/kkrt-labs/kakarot
+    - Cairo Core EVM: https://github.com/kkrt-labs/kakarot-ssj
+  - Official Ethereum Foundation test suite implementation:
+    - ef-tests: https://github.com/kkrt-labs/ef-tests
+  - Documentation repository: https://github.com/kkrt-labs/kakarot-docs
+
+- [Kakarot zkEVM Youtube playlist](https://www.youtube.com/watch?v=5BndqgugKOU&list=PLF3T1714MyKDwjjA8oHizXAdLNx62ka5U)
+
 ## Contract address book
 
 - AMMs: 🚧 Coming Soon 🚧
