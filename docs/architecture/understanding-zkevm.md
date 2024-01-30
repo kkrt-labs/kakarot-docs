@@ -58,7 +58,7 @@ Kakarot is a zkEVM built in Cairo. Essentially, this means we've written number 
 
 ## The concept of zk-Rollup
 
-The zk in zk-Rollup and zkEVM means _zero-knowledge_. It refers to the cryptographic method by which one party (the prover) can prove to another party (the verifier) that a statement is true. In the case of an Kakarot zkEVM, the prover (the rollup) proves to the verifier (Ethereum L1) that a batch of L2 transactions are valid. Zk-Rollups help Ethereum mainnet scale through this concept of batches: submit less transactions to Ethereum L1, have Ethereum L1 compute less logic.
+The zk in zk-Rollup and zkEVM means _zero-knowledge_. It refers to the cryptographic method by which one party (the prover) can prove to another party (the verifier) that a statement is true. In the case of an Kakarot zkEVM, the prover (the rollup) proves to the verifier (Ethereum L1) that a batch of L2 transactions are valid. Zk-Rollups help Ethereum mainnet scale through this concept of batches: submit less transactions to Ethereum L1, have Ethereum L1 compute less logic, lower the costs.
 
 The integrity of these so-called batches is mathematically guaranteed by zero-knowledge proofs (also called validity proofs when they are not privacy preserving).
 
@@ -74,8 +74,17 @@ TL;DR - execute off-chain, verify on-chain, save on costs.
 
 ## What does it mean to prove the EVM: the transition from EVM to zkEVM?
 
-A zkEVM is simply a zk-Rollup that is compatible with Ethereum. This means that users should be able to interact with it as if they were interacting with Ethereum (or almost). For instance, users will use the same tools on a zkEVM than on Ethereum L1, such as the same wallet (e.g. Metamask). Developers' smart contracts should be deployable to a zkEVM without any (or little) changes. This is powerful in the sense that the cryptography part is abstracted away. Users continue to interact with a high-level abstraction they're familiar with: the EVM. In that sense, the iterative "build on existing work" aspect of innovation is preserved in the Ethereum ecosystem.
+A zkEVM is simply a zk-Rollup that is compatible with Ethereum. This means that users should be able to interact with it as if they were interacting with Ethereum (or almost). For instance, users will use the same tools on a zkEVM than on Ethereum L1, such as the same wallet (e.g. Metamask). Developers' smart contracts should be deployable to a zkEVM without any (or little) changes.
 
-A zkEVM also designates the software used to prove Ethereum-compatible transactions and blocks. It refers to code that is used to go from an EVM transaction to a zero-knowledge (or validity) proof. The implementation of a zkEVM can be either low-level (at the so-called "circuits" level) or high-level (use an intermediary zkVM). [Scroll](https://scroll.io/) is an embodiment of the former, and Kakarot of the latter.
+This is powerful in the sense that the cryptography part is abstracted away. Users continue to interact with a high-level abstraction they're familiar with: the EVM. In that sense, the iterative "build on existing work" aspect of innovation is preserved in the Ethereum ecosystem.
+
+Other actors in the zk-Rollup ecosystem have decided to start over and break compatibility with the EVM. This includes for instance [Starknet](https://www.starknet.io/en), also powered by the CairoVM. Users and developers on Starknet need to get used to using new tools and technologies, but do not have to suffer from EVM legacy. Kakarot places a somewhat different bet: the EVM will remain the dominant common abstraction layer in crypto and Cairo will be the strongest zkVM. Therefore, it makes sense to both:
+
+- build an EVM in 2024,
+- bet on the Cairo powerhouse for the years to come.
+
+Kakarot users stand to benefit both from the Ethereum network effect and the innovations built on the most disruptive zk-toolbox: the CairoVM stack.
+
+Note that a zkEVM also designates the software used to prove Ethereum-compatible transactions and blocks. It refers to code that is used to go from an EVM transaction to a zero-knowledge (or validity) proof. The implementation of a zkEVM can be either low-level (at the so-called "circuits" level) or high-level (use an intermediary zkVM). [Scroll](https://scroll.io/) is an embodiment of the former, and Kakarot of the latter.
 
 TL;DR: Execute Ethereum-compatible transactions on a Layer 2, prove them off-chain, bundle and verify them on Ethereum L1. Save on costs, benefit from an existing ecosystem: the Ethereum community.
