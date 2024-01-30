@@ -5,14 +5,21 @@ sidebar_position: 2
 
 ## Kakarot, the zkEVM built in Cairo
 
-Kakarot is a zkEVM built in [Cairo](https://www.cairo-lang.org/), the provable language that powers [Starknet](https://starkware.co/starknet/) and all the StarknetOS chains (also called CairoVM chains, or Starknet appchains). It’s an Layer 2, a [so-called zkRollup](https://ethereum.org/developers/docs/scaling/zk-rollups). It’s Ethereum compatible, now and forever. Beyond compatibility, Kakarot strives to add new features such as native account abstraction. Kakarot's driving ethos is to _Prove, Scale and Innovate_.
+Kakarot is a zkEVM built in [Cairo](https://www.cairo-lang.org/), the provable language that powers [Starknet](https://starkware.co/starknet/) and all the StarknetOS chains (also called CairoVM chains, or Starknet appchains). Kakarot is an Ethereum-compatible Layer 2, a [so-called zkRollup](https://ethereum.org/developers/docs/scaling/zk-rollups). Beyond compatibility, Kakarot strives to push more innovations to the L2 space, and to add new features such as native account abstraction to the EVM. Kakarot's driving ethos is to _Prove, Scale and Innovate_ 🥕.
 
-In concrete terms:
+In concrete terms,
+Kakarot is an Ethereum-compatible zk-Rollup:
 
-- For users, use Kakarot ìn the same way as Ethereum mainnet: interact with dApps using Metamask or another wallet. Kakarot is a zk-Rollup:
-  - Zero-Knowledge (zk): minimized trust, maximized integrity derived from maths.
-  - Rollup: Enjoy lower costs
+- Ethereum-compatible: use the Kakarot network in the same way as Ethereum mainnet.
+- Zero-Knowledge (zk): minimized trust, maximized integrity derived from maths.
+- Rollup: Enjoy lower costs than on Ethereum mainnet.
+
+For users:
+
+- For users, use Kakarot ìn the same way as Ethereum mainnet: interact with dApps using any EVM wallet, e.g. Metamask or Rabby.
 - For developers and teams, you can build on Kakarot using the Ethereum ecosystem's standard tools: Solidity or Vyper, Foundry, Hardhat, Etherjs etc.
+
+Discover the Kakarot explorer and other useful links on the [survival guide](survival-guide) page.
 
 Note: Kakarot is not a privacy chain. Zero-knowledge technologies can be used for two (non-excluding) purposes, Scaling or Privacy. Kakarot uses the former to scale Ethereum.
 
