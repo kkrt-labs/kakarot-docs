@@ -7,7 +7,7 @@ To grasp the concept of zkEVM, let's start by understanding what the Ethereum Vi
 
 ## The Ethereum Virtual Machine (EVM)
 
-Starting from the [Ethereum foundation definition](https://ethereum.org/developers/docs/evm#from-ledger-to-state-machine):
+Starting from the [Ethereum Foundation definition](https://ethereum.org/developers/docs/evm#from-ledger-to-state-machine):
 
 > Ethereum's state is a large data structure which holds not only all accounts and balances, but a machine state, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
 
@@ -15,9 +15,9 @@ From the above we get that the Ethereum blockchain is a distributed state machin
 
 Note that the EVM is a deterministic execution environment.
 
-Execution Environment: The EVM is where smart contracts are executed. Each Ethereum node runs an EVM instance, allowing it to participate in executing and validating smart contracts and transactions.
-
-Deterministic: The EVM is deterministic, meaning that a smart contract will produce the same output given the same input, regardless of which node in the network executes it. This is essential for maintaining consensus across the network.
+- Deterministic meaning that a smart contract will produce the same output given the same input, regardless of which node in the network executes it. This is essential for maintaining consensus across the network.
+- An execution environment i.e. where smart contracts are executed. Note that each Ethereum node (execution client) runs an EVM instance, allowing it to participate in executing and validating smart contracts and transactions.
+  - For instance, Ethereum Validators run both a consensus client and an execution client. This execution client is powered by an EVM implementation. That way, validators can _validate_ transactions by re-running them locally before voting ✅!
 
 TL;DR - the EVM is the common computer used to run logic on the Ethereum network and hold all user state (balances, contract code, etc.).
 
