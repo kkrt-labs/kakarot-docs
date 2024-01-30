@@ -16,6 +16,7 @@ sidebar_position: 2
 - Twitter: https://twitter.com/kakarotzkevm
 - Official Website: https://kakarot.org
 - Kakarot Github Repositories: https://github.com/orgs/kkrt-labs/repositories
+
   - RPC Layer:
     - RPC Server: https://github.com/kkrt-labs/kakarot-rpc
     - Indexer (to store EVM data structures): https://github.com/kkrt-labs/kakarot-indexer
