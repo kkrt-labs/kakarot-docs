@@ -7,6 +7,8 @@ To grasp the concept of zkEVM, let's start by understanding what the Ethereum Vi
 
 ## The Ethereum Virtual Machine (EVM)
 
+### EVM Overview
+
 Starting from the [Ethereum Foundation definition](https://ethereum.org/developers/docs/evm#from-ledger-to-state-machine):
 
 > Ethereum's state is a large data structure which holds not only all accounts and balances, but a machine state, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
@@ -16,10 +18,12 @@ From the above we get that the Ethereum blockchain is a distributed state machin
 Note that the EVM is a deterministic execution environment.
 
 - Deterministic meaning that a smart contract will produce the same output given the same input, regardless of which node in the network executes it. This is essential for maintaining consensus across the network.
-- An execution environment i.e. where smart contracts are executed. Note that each Ethereum node (execution client) runs an EVM instance, allowing it to participate in executing and validating smart contracts and transactions.
-  - For instance, Ethereum Validators run both a consensus client and an execution client. This execution client is powered by an EVM implementation. That way, validators can _validate_ transactions by re-running them locally before voting ✅!
+- An execution environment i.e. where smart contracts are executed. Note that each Ethereum node runs an EVM instance, allowing it to participate in executing and validating smart contracts and transactions.
+  - For instance, Ethereum Validators run both a consensus client and an execution client. This execution client is powered by an EVM implementation. That way, validators _validate_ transactions by re-running them locally before voting to ensure their correctness ✅!
 
-TL;DR - the EVM is the common computer used to run logic on the Ethereum network and hold all user state (balances, contract code, etc.).
+TL;DR - the EVM is the common virtual computer used to run logic on the Ethereum network.
+
+### Architecture of the EVM
 
 ---
 
@@ -29,6 +33,28 @@ Diagram - The EVM Illustrated by Takenobu:
 Source: The EVM illustrated, https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf
 
 ---
+
+Let's use the image above from Takenobu to describe the machine architecture of the EVM.
+
+1. Virtual ROM: This contains the EVM code. Once smart contracts are deployed, their code cannot be changed (proxy pattern notwithstanding 🧑‍🔬). Smart contract code is said to be _immutable_ on Ethereum.
+
+2. Program counter (PC): This keeps track of the position in the code that the EVM is currently executing.
+
+3. Gas available (Gas): Each operation in the EVM requires a certain amount of "gas," which is a unit that measures the computational effort required. The gas available field tracks how much gas is left for the transaction to continue operating.
+
+4. Machine state (µ): This is the volatile state of the machine which includes the program counter, memory, stack, and more. It is volatile because it is reset between transactions. It is not shared between intra-transaction calls (e.g. if there are 3 different contracts calls within one transaction), though this will change with [transient storage](https://eips.ethereum.org/EIPS/eip-1153).
+
+5. Stack: The EVM is a stack-based machine, which means that it uses a data structure called a stack to store data. Operations in EVM code manipulate the stack in various ways.
+
+6. Memory: This is a temporary place to store data during execution. It is volatile because it is reset between transactions or intra-transaction calls.
+
+7. (Account) Storage: This is a long-term storage that each account in Ethereum has. Unlike memory, storage is persistent and remains between transactions and even between sessions. This includes both Account Contracts (smart contracts) and Externally Owned Accounts or EOAs (user accounts, like the account in your Metamask wallet!).
+
+8. World State (σ): This is the persistent state of the entire Ethereum system which includes all accounts (no. 7) and their balances, storage, code, etc.
+
+It's called a "stack-based" architecture because the primary mode of computation is through a data stack, which is a last-in, first-out (LIFO) structure.
+
+Kakarot is a zkEVM built in Cairo. Essentially, this means we've written number 1 to 8 in Cairo (by relying on existing StarknetOS clients as well). The [Geth](https://geth.ethereum.org/) team has done it in Golang. The [Reth](https://github.com/paradigmxyz/reth) team has done it in Rust. It just so happens that Cairo is provable by design, and the EVM needs to be proven for Ethereum to scale! How convenient 🥕.
 
 ## The concept of zk-Rollup
 
