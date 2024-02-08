@@ -6,8 +6,10 @@ sidebar_position: 2
 
 ## Useful links
 
-- Registration Page (for invite-only phase of the Kakarot Alpha Testnet): https://signup.testnet.kakarot.org
-  - You'll need a whitelist invite to be able to send transactions to the Kakarot Alpha Testnet 📩.
+- Registration Page (for invite-only phase of the Kakarot Alpha Testnet):
+  https://signup.testnet.kakarot.org
+  - You'll need a whitelist invite to be able to send transactions to the
+    Kakarot Alpha Testnet 📩.
 - Faucet: https://faucet.testnet.kakarot.org
   - Head out to the faucet once a day to grab some testnet ETH 🚰💧!
 - Block Explorer: https://explorer.testnet.kakarot.org
@@ -19,7 +21,8 @@ sidebar_position: 2
 
   - RPC Layer:
     - RPC Server: https://github.com/kkrt-labs/kakarot-rpc
-    - Indexer (to store EVM data structures): https://github.com/kkrt-labs/kakarot-indexer
+    - Indexer (to store EVM data structures):
+      https://github.com/kkrt-labs/kakarot-indexer
   - Cairo Programs (two different EVM implementations):
     - Cairo Zero Core EVM: https://github.com/kkrt-labs/kakarot
     - Cairo Core EVM: https://github.com/kkrt-labs/kakarot-ssj

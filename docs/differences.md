@@ -4,7 +4,10 @@ sidebar_position: 3
 
 # Differences between Kakarot and Ethereum
 
-Although Kakarot is Ethereum-compatible and aims to support the latest features of Ethereum (e.g. [Cancun new opcodes](https://blog.ethereum.org/2024/01/10/goerli-dencun-announcement)), it still has some edge case behaviours. They are listed below:
+Although Kakarot is Ethereum-compatible and aims to support the latest features
+of Ethereum (e.g.
+[Cancun new opcodes](https://blog.ethereum.org/2024/01/10/goerli-dencun-announcement)),
+it still has some edge case behaviours. They are listed below:
 
 | Item                   | Ethereum                                                   | Kakarot                                                                                                                                                                               |
 | ---------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
