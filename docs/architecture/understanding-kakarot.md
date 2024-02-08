@@ -45,7 +45,7 @@ instruction set. The EVM is the blueprint, Kakarot implements it in Cairo.
 > Cairo is the first Turing-complete language for creating provable programs for
 > general computation.
 
-Cairo is like any a programming language, but writing provable software. It
+Cairo is like any a programming language, but made for writing provable software. It
 means that whatever is written in Cairo is, by design, _zk_. Using Cairo means
 that we leverage cryptography without having to think about it, it sort of
 "comes for free" just by using this language and not, say, rust.
