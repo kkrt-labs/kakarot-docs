@@ -70,8 +70,9 @@ as a set of Cairo smart contracts on a CairoVM-powered chain. This CairoVM chain
 is "invisible" to the user. Users only interact with Kakarot through the RPC
 layer in an Ethereum-compatible way. The only exposed interface in Kakarot zkEVM
 is the Ethereum JSON-RPC specification. In the future, we could leverage this to
-allow developers to write their own Cairo-precompiled contracts, as Arbitrum
-Stylus introduced Rust, C, and C++ together with the EVM.
+allow developers to write their own Cairo-precompiled contracts, as
+[Arbitrum Stylus](https://arbitrum.io/stylus) introduced Rust, C, and C++
+together with the EVM.
 
 ---
 
@@ -143,8 +144,8 @@ human readable language than any other zkEVM. This matters to users in two ways:
   term could include parallel execution, seed-less wallets (e.g. rely on face ID
   only), Celestia DA integration and more.
 
-TL;DR - By betting on the CairoVM for the years to come, Kakarot synergies with
-the entire Cairo (and thus Starknet) ecosystem. Cairo is the most advanced
+TL;DR - By betting on the CairoVM for the years to come, Kakarot leverages the
+entire Cairo (and thus Starknet) ecosystem. Cairo is the most advanced
 high-level zk-toolbox in production, first with
 [StarkEx](https://www.theblock.co/post/237064/starkex-layer-2-records-1-trillion-in-on-chain-trading-volume-since-june-2020)
 and now Starknet.
