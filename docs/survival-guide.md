@@ -30,7 +30,7 @@ sidebar_position: 2
     - ef-tests: https://github.com/kkrt-labs/ef-tests
   - Documentation repository: https://github.com/kkrt-labs/kakarot-docs
 
-- [Kakarot zkEVM Youtube playlist](https://www.youtube.com/watch?v=5BndqgugKOU&list=PLF3T1714MyKDwjjA8oHizXAdLNx62ka5U)
+- [Kakarot zkEVM YouTube playlist](https://www.youtube.com/watch?v=5BndqgugKOU&list=PLF3T1714MyKDwjjA8oHizXAdLNx62ka5U)
 
 ## Contract address book
 

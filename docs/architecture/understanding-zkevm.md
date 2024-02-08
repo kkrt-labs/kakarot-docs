@@ -127,7 +127,7 @@ idea behind zk-Rollups is to run a transaction once, compute that transaction's
 proof of integrity and thereafter only verify this proof without re-running the
 initial transaction. Luckily for us (and the Rollup centric roadmap of
 Ethereum), the verification of a transaction's proof is way cheaper than
-re-running that same transaction (it is asymtotically exponentially cheaper).
+re-running that same transaction (it is asymptotically exponentially cheaper).
 
 From there is derived the protocols of zk-Rollups. As per the
 [Ethereum website](https://ethereum.org/developers/docs/scaling/zk-rollups#what-are-zk-rollups):
