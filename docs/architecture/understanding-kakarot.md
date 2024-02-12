@@ -82,8 +82,8 @@ Diagram - Kakarot RPC Layer
 
 ---
 
-To put it simply, Kakarot L2 is composed of a set of Cairo programs that emulate
-the EVM and an RPC layer to allow users to interact with it in an Ethereum
+To put it simply, Kakarot L2 is composed of an EVM written in Cairo and 
+an RPC layer to allow users to interact with it in an Ethereum
 format. All Cairo execution traces are provable by design, which allows Kakarot
 to batch blocks and submit proofs to L1 using the
 [Starkware Shared prover](https://starkware.co/tech-stack/) (SHARP). Because
