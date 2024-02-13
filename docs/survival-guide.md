@@ -7,13 +7,13 @@ sidebar_position: 2
 ## Useful links
 
 - Registration Page (for invite-only phase of the Kakarot Alpha Testnet):
-  https://signup.testnet.kakarot.org
+  https://sepolia-signup.kakarot.org
   - You'll need a whitelist invite to be able to send transactions to the
     Kakarot Alpha Testnet 📩.
-- Faucet: https://faucet.testnet.kakarot.org
+- Faucet: https://sepolia-faucet.kakarot.org
   - Head out to the faucet once a day to grab some testnet ETH 🚰💧!
-- Block Explorer: https://explorer.testnet.kakarot.org
-- Public RPC: https://rpc.testnet.kakarot.org
+- Block Explorer: https://sepolia.kakarotscan.org
+- Public RPC: https://sepolia-rpc.kakarot.org
 - Discord: https://discord.gg/kakarotzkevm
 - Twitter: https://twitter.com/kakarotzkevm
 - Official Website: https://kakarot.org
@@ -23,7 +23,7 @@ sidebar_position: 2
     - RPC Server: https://github.com/kkrt-labs/kakarot-rpc
     - Indexer (to store EVM data structures):
       https://github.com/kkrt-labs/kakarot-indexer
-  - Cairo Programs (two different EVM implementations):
+  - Core EVM written in Cairo (two different implementations):
     - Cairo Zero Core EVM: https://github.com/kkrt-labs/kakarot
     - Cairo Core EVM: https://github.com/kkrt-labs/kakarot-ssj
   - Official Ethereum Foundation test suite implementation:
