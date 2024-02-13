@@ -11,10 +11,10 @@ export default function Home(): JSX.Element {
           Navigate the Kakarot <span className={styles.accent}>Ecosystem</span>
         </h1>
         <p className={styles.paragraph}>
-          Discover Kakarot, where impeccable developer experience meets a
-          user-first approach: 100% Ethereum compatiblity plus UX-driven new
-          features (account abstraction, multicall, new EIPs). Dive into our
-          documentation and start building the future of Ethereum, today.
+          Discover Kakarot zkEVM, a zkRollup where great developer experience
+          meets a user-first approach: 100% Ethereum compatiblity plus UX-driven
+          new features (account abstraction, multicall, new EIPs). Start
+          building the future of Ethereum, today.
         </p>
         <Link className={styles.button} to='/quick-start'>
           Access the Docs
