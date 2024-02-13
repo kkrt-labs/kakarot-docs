@@ -41,13 +41,13 @@ Example tutorial - Adding a new network to Metamask: open the Metamask
 extension. Click "Add Network". Choose "Add a Network Manually". Then fill the
 fields:
 
-| Category       | Value                                |
-| -------------- | ------------------------------------ |
-| Network Name   | Kakarot zkEVM                        |
-| RPC URL        | https://rpc.testnet.kakarot.org      |
-| Chain Id       | 10710711648                          |
-| Symbol         | ETH                                  |
-| Block Explorer | https://explorer.testnet.kakarot.org |
+| Category       | Value                           |
+| -------------- | ------------------------------- |
+| Network Name   | Kakarot zkEVM                   |
+| RPC URL        | https://sepolia-rpc.kakarot.org |
+| Chain Id       | 10710711648                     |
+| Symbol         | ETH                             |
+| Block Explorer | https://sepolia.kakarotscan.org |
 
 ### As a developer, how can I build on Kakarot zkEVM?
 
