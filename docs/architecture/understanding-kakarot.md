@@ -23,7 +23,7 @@ In concrete terms, Kakarot is an Ethereum-compatible zk-Rollup:
 
 For users:
 
-- For end users, use Kakarot ìn the same way as Ethereum mainnet: interact with
+- For end users, use Kakarot in the same way as Ethereum mainnet: interact with
   dApps using any EVM wallet, e.g. Metamask or Rabby.
 - For developers and teams, you can build on Kakarot using the Ethereum
   ecosystem's standard tools: Solidity or Vyper, Foundry, Hardhat, Etherjs etc.
