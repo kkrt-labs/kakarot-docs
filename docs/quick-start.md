@@ -56,7 +56,7 @@ For developers as well, change the RPC URL, and it should "just work".
 In case you encounter some unknown bug or want to discuss new features, you can:
 
 - Join our discord and get support: https://discord.gg/kakarotzkevm
-- Ask us questions on Twitter: https://twitter.com/KakarotZkEvm
+- Ask us anything on Twitter: https://twitter.com/KakarotZkEvm
 
 ## What differentiates Kakarot zkEVM?
 
