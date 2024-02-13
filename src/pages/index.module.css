@@ -1,0 +1,115 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #272639;
+  padding: 0.5rem 0.8rem;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fbfcff;
+  gap: 1rem;
+}
+
+.button {
+  color: #272639;
+  background: linear-gradient(90deg, #29afa4 0%, #61fff2 100%);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.button:hover {
+  opacity: 0.8;
+  color: #272639;
+}
+
+.paragraph {
+  color: #fbfcff;
+  max-width: 50ch;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  max-width: 14ch;
+  text-align: center;
+  color: #fbfcff;
+}
+
+.accent {
+  color: #45e2d5;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fbfcff;
+  background-color: #34334c;
+  border-radius: 10px;
+  padding: 5%;
+  gap: 1rem;
+  width: 90%;
+  margin: 5% 5%;
+}
+
+.footeritem {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #fbfcff;
+}
+
+.footerdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.discord {
+  border-radius: 100%;
+}
+
+.small {
+  font-size: x-small;
+}
+
+@media screen and (min-width: 668px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 5%;
+    width: 100%;
+    align-items: center;
+    color: #fbfcff;
+    background-color: transparent;
+  }
+
+  .title {
+    font-size: 3rem;
+    max-width: 20ch;
+    text-align: center;
+    color: #fbfcff;
+  }
+}
