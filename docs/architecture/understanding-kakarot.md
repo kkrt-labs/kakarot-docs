@@ -29,7 +29,7 @@ For users:
   ecosystem's standard tools: Solidity or Vyper, Foundry, Hardhat, Etherjs etc.
 
 Discover the Kakarot explorer and other useful links on the
-[survival guide](survival-guide) page.
+[survival guide](../survival-guide) page.
 
 Note: Kakarot is not a privacy chain. Zero-knowledge technologies can be used
 for two (non-excluding) purposes, Scaling or Privacy. Kakarot uses the former to
@@ -45,10 +45,10 @@ instruction set. The EVM is the blueprint, Kakarot implements it in Cairo.
 > Cairo is the first Turing-complete language for creating provable programs for
 > general computation.
 
-Cairo is like any a programming language, but made for writing provable software. It
-means that whatever is written in Cairo is, by design, _zk_. Using Cairo means
-that we leverage cryptography without having to think about it, it sort of
-"comes for free" just by using this language and not, say, rust.
+Cairo is like any a programming language, but made for writing provable
+software. It means that whatever is written in Cairo is, by design, _zk_. Using
+Cairo means that we leverage cryptography without having to think about it, it
+sort of "comes for free" just by using this language and not, say, rust.
 
 ---
 
@@ -82,10 +82,10 @@ Diagram - Kakarot RPC Layer
 
 ---
 
-To put it simply, Kakarot L2 is composed of an EVM written in Cairo and 
-an RPC layer to allow users to interact with it in an Ethereum
-format. All Cairo execution traces are provable by design, which allows Kakarot
-to batch blocks and submit proofs to L1 using the
+To put it simply, Kakarot L2 is composed of an EVM written in Cairo and an RPC
+layer to allow users to interact with it in an Ethereum format. All Cairo
+execution traces are provable by design, which allows Kakarot to batch blocks
+and submit proofs to L1 using the
 [Starkware Shared prover](https://starkware.co/tech-stack/) (SHARP). Because
 Cairo is a vibrant ecosystem, other prover implementations in the future will
 emerge, such as Lambdaclass'
