@@ -49,6 +49,8 @@ fields:
 | Symbol         | ETH                             |
 | Block Explorer | https://sepolia.kakarotscan.org |
 
+🚧 Warning 🚧: Links are not up yet.
+
 ### As a developer, how can I build on Kakarot zkEVM?
 
 For developers as well, change the RPC URL, and it should "just work".
