@@ -2,8 +2,6 @@ import styles from './index.module.css';
 import Link from '@docusaurus/Link';
 import KakarotLogo from './kakarot.svg';
 import DiscordLogo from './discord.svg';
-import Lottie from 'lottie-react';
-import animationData from './lottie.json';
 import Bg1 from './bg1.svg';
 import Bg2 from './bg2.svg';
 import Bg3 from './bg3.svg';

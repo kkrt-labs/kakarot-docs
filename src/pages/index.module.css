@@ -37,9 +37,6 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: auto;
-  width: 1100px;
   z-index: 0;
   animation: rotate 200s infinite linear;
 }
@@ -173,11 +170,6 @@ a:hover {
   .paragraph {
     max-width: 60ch;
   }
-
-  .lottie {
-    position: absolute;
-    width: 1460px;
-  }
 }
 
 @media screen and (min-width: 2100px) {
@@ -188,10 +180,6 @@ a:hover {
   .paragraph {
     font-size: 2rem;
     font-weight: light;
-  }
-
-  .lottie {
-    width: 3000px;
   }
 
   .small {
@@ -234,15 +222,5 @@ a:hover {
     color: #fbfcff;
     background-color: transparent;
     flex-wrap: wrap;
-  }
-
-  .lottie {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-height: auto;
-    width: 1460px;
-    z-index: 0;
   }
 }
