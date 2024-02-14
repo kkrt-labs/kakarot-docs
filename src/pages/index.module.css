@@ -4,6 +4,24 @@ a:hover {
   text-decoration: none;
 }
 
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateBackwards {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
 .container {
   height: 100vh;
   position: relative;
@@ -19,10 +37,12 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: auto;
-  width: 1100px;
   z-index: 0;
+  animation: rotate 200s infinite linear;
+}
+
+.backwards {
+  animation: rotateBackwards 200s infinite linear;
 }
 
 .content {
@@ -150,16 +170,6 @@ a:hover {
   .paragraph {
     max-width: 60ch;
   }
-
-  .lottie {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-height: auto;
-    width: 1460px;
-    z-index: 0;
-  }
 }
 
 @media screen and (min-width: 2100px) {
@@ -170,10 +180,6 @@ a:hover {
   .paragraph {
     font-size: 2rem;
     font-weight: light;
-  }
-
-  .lottie {
-    width: 3000px;
   }
 
   .small {
@@ -216,15 +222,5 @@ a:hover {
     color: #fbfcff;
     background-color: transparent;
     flex-wrap: wrap;
-  }
-
-  .lottie {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-height: auto;
-    width: 1460px;
-    z-index: 0;
   }
 }

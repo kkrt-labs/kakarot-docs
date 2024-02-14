@@ -2,17 +2,16 @@ import styles from './index.module.css';
 import Link from '@docusaurus/Link';
 import KakarotLogo from './kakarot.svg';
 import DiscordLogo from './discord.svg';
-import Lottie from 'lottie-react';
-import animationData from './lottie.json';
+import Bg1 from './bg1.svg';
+import Bg2 from './bg2.svg';
+import Bg3 from './bg3.svg';
 
 export default function Home(): JSX.Element {
   return (
     <div className={styles.container}>
-      <Lottie
-        className={styles.lottie}
-        animationData={animationData}
-        loop={true}
-      />
+      <Bg1 className={styles.lottie} />
+      <Bg2 className={`${styles.lottie} ${styles.backwards}`} />
+      <Bg3 className={styles.lottie} />
       <div className={styles.content}>
         <div className={styles.principal}>
           <h1 className={styles.title}>
