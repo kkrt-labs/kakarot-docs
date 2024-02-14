@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-a,
-button {
-  font-family: 'Aldrich', sans-serif;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -64,6 +52,7 @@ a:hover {
   border: none;
   padding: 1rem 2rem;
   border-radius: 5px;
+  font-family: 'Aldrich', sans-serif;
 }
 
 .button:hover {
@@ -82,6 +71,11 @@ a:hover {
   max-width: 14ch;
   text-align: center;
   color: #fbfcff;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.kakarotlink {
+  font-family: 'Aldrich', sans-serif;
 }
 
 .accent {
@@ -134,6 +128,7 @@ a:hover {
 
 .medium {
   font-size: small;
+  font-family: 'Aldrich', sans-serif;
 }
 
 @media screen and (min-width: 668px) {
