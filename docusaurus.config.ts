@@ -78,8 +78,12 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Testnet",
               to: "/survival-guide",
+            },
+            {
+              label: "Introduction",
+              to: "/quick-start",
             },
           ],
         },
