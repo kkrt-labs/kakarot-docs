@@ -9,7 +9,7 @@ sidebar_position: 2
 🚧 Warning 🚧: RPC and Block Explorer links are not up yet.
 
 - 🚧 Not Up Yet 🚧 | Registration Page (for invite-only phase of the Kakarot
-  Alpha Testnet): https://sepolia-signup.kakarot.org
+  Alpha Testnet): https://sepolia-faucet.kakarot.org/signup
   - You'll need a whitelist invite to be able to send transactions to the
     Kakarot Alpha Testnet 📩.
 - 🚧 Not Up Yet 🚧 | Faucet: https://sepolia-faucet.kakarot.org
