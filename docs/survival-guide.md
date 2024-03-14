@@ -6,16 +6,16 @@ sidebar_position: 2
 
 ## Useful links
 
-🚧 Warning 🚧: RPC and Block Explorer links are not up yet.
+🚧 Warning 🚧: Some links are not up yet.
 
-- 🚧 Not Up Yet 🚧 | Registration Page (for invite-only phase of the Kakarot
-  Alpha Testnet): https://sepolia-faucet.kakarot.org/signup
+- Registration Page (for invite-only phase of the Kakarot
+  Alpha Testnet): https://sepolia-faucet.kakarot.org/login
   - You'll need a whitelist invite to be able to send transactions to the
     Kakarot Alpha Testnet 📩.
-- 🚧 Not Up Yet 🚧 | Faucet: https://sepolia-faucet.kakarot.org
-  - Head out to the faucet once a day to grab some testnet ETH 🚰💧!
+- Faucet: https://sepolia-faucet.kakarot.org
+  - Head out to the faucet once a day to grab some testnet ETH 🚰💧! (⚠️ You need to be whitelisted)
 - 🚧 Not Up Yet 🚧 | Block Explorer: https://sepolia.kakarotscan.org
-- 🚧 Not Up Yet 🚧 | Public RPC: https://sepolia-rpc.kakarot.org
+- Public RPC: https://sepolia-rpc.kakarot.org
 - Discord: https://discord.gg/kakarotzkevm
 - Twitter: https://twitter.com/kakarotzkevm
 - Official Website: https://kakarot.org
