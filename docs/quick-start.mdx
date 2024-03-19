@@ -37,6 +37,40 @@ Head over to the [survival guide](survival-guide) section to find useful links
 for our alpha testnet. Again, change the network to Kakarot in your wallet and
 it should "just work".
 
+export const AddKakarotNetwork = () => (
+  <button
+    onClick={async () => {
+      const params = [
+        {
+          chainId: "0x6B6B7274",
+          chainName: "Kakarot Sepolia",
+          nativeCurrency: {
+            name: "Ether",
+            symbol: "ETH",
+            decimals: 18,
+          },
+          rpcUrls: ["https://sepolia-rpc.kakarot.org"],
+        },
+      ];
+      try {
+        // Note: if chain is already added, returns `null` and won't error out
+        await window.ethereum.request({
+          method: "wallet_addEthereumChain",
+          params,
+        });
+      } catch (error) {
+        // TODO: Add User feedback (e.g. Toast message) in case of error
+        console.error(error);
+      }
+    }}
+    className="button button--primary button--lg padding-horiz--lg padding-vert--md margin--md margin-bottom--lg"
+  >
+    🦊 Add Kakarot Sepolia to Metamask 🦊
+  </button>
+);
+
+<AddKakarotNetwork />
+
 Example tutorial - Adding a new network to Metamask: open the Metamask
 extension. Click "Add Network". Choose "Add a Network Manually". Then fill the
 fields:
