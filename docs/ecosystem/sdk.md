@@ -29,12 +29,22 @@ to prevent re-orgs is 5. We recommend users to set this to 1 in Kakarot Sepolia.
 Another example is that Kakarot does not support fee bumping since it has no fee
 market (FIFO system).
 
-Here is an example configuration for Kakarot
-Sepolia.
+Here is an example configuration for Kakarot Sepolia.
 
 ```js
 // hardhat.config.js
 module.exports = {
+  defaultNetwork: 'kakarot',
+  networks: {
+    hardhat: {},
+    kakarot: {
+      url: 'https://sepolia-rpc.kakarot.org',
+      accounts: [
+        '<YOUR_PRIVATE_KEY>',
+      ],
+    },
+  },
+  // ... other fields
   ignition: {
     blockPollingInterval: 3_000,
     timeBeforeBumpingFees: 3 * 60 * 1_000,
