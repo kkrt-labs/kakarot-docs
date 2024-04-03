@@ -34,14 +34,12 @@ Here is an example configuration for Kakarot Sepolia.
 ```js
 // hardhat.config.js
 module.exports = {
-  defaultNetwork: 'kakarot',
+  defaultNetwork: "kakarot",
   networks: {
     hardhat: {},
     kakarot: {
-      url: 'https://sepolia-rpc.kakarot.org',
-      accounts: [
-        '<YOUR_PRIVATE_KEY>',
-      ],
+      url: "https://sepolia-rpc.kakarot.org",
+      accounts: ["<YOUR_PRIVATE_KEY>"],
     },
   },
   // ... other fields
@@ -53,3 +51,5 @@ module.exports = {
   },
 };
 ```
+
+Acknowledgment: Thanks @swetashaw\_ for spotting this issue.
