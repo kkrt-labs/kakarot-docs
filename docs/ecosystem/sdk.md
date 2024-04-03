@@ -24,10 +24,13 @@ We recommend users to pay attention to the
 [configuration of Ignition on Kakarot Sepolia](https://hardhat.org/ignition/docs/config#requiredconfirmations).
 
 There are some known issues with the default Ignition configuration. For
-instance, no. of block confirmations required by ignition to prevent re-orgs
-defaults to 5. We recommend users to set this to 1 in Kakarot Sepolia. Another
-example is that Kakarot does not support fee bumping since it has no fee market
-(FIFO system).
+instance, the default for the number of block confirmations required by ignition
+to prevent re-orgs is 5. We recommend users to set this to 1 in Kakarot Sepolia.
+Another example is that Kakarot does not support fee bumping since it has no fee
+market (FIFO system).
+
+Here is an example configuration for Kakarot
+Sepolia.
 
 ```js
 // hardhat.config.js
