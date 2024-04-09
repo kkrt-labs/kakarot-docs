@@ -1,6 +1,5 @@
 import styles from './index.module.css';
 import Link from '@docusaurus/Link';
-import KakarotLogo from './kakarot.svg';
 import DiscordLogo from './discord.svg';
 import Bg1 from './bg1.svg';
 import Bg2 from './bg2.svg';
@@ -34,7 +33,11 @@ export default function Home(): JSX.Element {
             className={styles.footeritem}
             target='_blank'
           >
-            <KakarotLogo className={styles.icon} />
+            <img
+              className={styles.icon}
+              alt='kakarot logo'
+              src='img/kakarot.png'
+            />
             <span className={styles.kakarotlink}>kakarot.org</span>
           </a>
           <a
