@@ -4,40 +4,51 @@ sidebar_position: 2
 
 # Kakarot Testnet Survival Guide
 
-## Useful links
+Welcome to the Kakarot Testnet Survival Guide! This document aims to provide all
+the necessary links and information to navigate the Testnet well.
 
-🚧 Warning 🚧: Some links are not up yet.
+## Useful Links
 
-- Registration Page (for invite-only phase of the Kakarot
-  Alpha Testnet): https://sepolia-faucet.kakarot.org/login
-  - You'll need a whitelist invite to be able to send transactions to the
-    Kakarot Alpha Testnet 📩.
-- Faucet: https://sepolia-faucet.kakarot.org
-  - Head out to the faucet once a day to grab some testnet ETH 🚰💧! (⚠️ You need to be whitelisted)
-- 🚧 Not Up Yet 🚧 | Block Explorer: https://sepolia.kakarotscan.org
+### Development Resources
+
+- [Registration Page for Kakarot Testnet Invite-Only Phase](https://sepolia-faucet.kakarot.org/login):
+  Access requires a whitelist invite.
+- [Faucet 🚰](https://sepolia-faucet.kakarot.org): Claim testnet ETH daily.
+  Whitelist required.
+
+### Testnet Tools
+
+- [Block Explorer](https://sepolia.kakarotscan.org)
 - Public RPC: https://sepolia-rpc.kakarot.org
-- Discord: https://discord.gg/kakarotzkevm
-- Twitter: https://twitter.com/kakarotzkevm
+
+### Community Channels
+
+- [Discord](https://discord.gg/kakarotzkevm)
+- [Twitter](https://twitter.com/kakarotzkevm)
+
+### Resources and deeper dives
+
 - Official Website: https://kakarot.org
 - Kakarot Github Repositories: https://github.com/orgs/kkrt-labs/repositories
 
   - RPC Layer:
     - RPC Server: https://github.com/kkrt-labs/kakarot-rpc
-    - Indexer (to store EVM data structures):
-      https://github.com/kkrt-labs/kakarot-indexer
   - Core EVM written in Cairo (two different implementations):
-    - Cairo Zero Core EVM: https://github.com/kkrt-labs/kakarot
+    - Cairo Zero Core EVM (in production for testnet):
+      https://github.com/kkrt-labs/kakarot
     - Cairo Core EVM: https://github.com/kkrt-labs/kakarot-ssj
   - Official Ethereum Foundation test suite implementation:
     - ef-tests: https://github.com/kkrt-labs/ef-tests
   - Documentation repository: https://github.com/kkrt-labs/kakarot-docs
 
-- [Kakarot zkEVM YouTube playlist](https://www.youtube.com/watch?v=5BndqgugKOU&list=PLF3T1714MyKDwjjA8oHizXAdLNx62ka5U)
+- [Kakarot zkEVM Talks playlist](https://www.youtube.com/watch?v=5BndqgugKOU&list=PLF3T1714MyKDwjjA8oHizXAdLNx62ka5U)
 
-## Contract address book
+## Contract Address Book
 
-- AMMs: 🚧 Coming Soon 🚧
-- USDc: 🚧 Coming Soon 🚧
-- USDt: 🚧 Coming Soon 🚧
-- WBTC: 🚧 Coming Soon 🚧
-- Oracles: 🚧 Coming Soon 🚧
+🚧 The following contract addresses are coming soon.
+
+- AMMs
+- USDc
+- USDt
+- WBTC
+- Oracles
