@@ -93,32 +93,26 @@ datasources:
   mainnet_node:
     kind: evm.node
     url: https://sepolia-rpc.kakarot.org
-    ws_url: wss://sepolia-rpc.kakarot.org
-
-  mock_subsquid: # WE HOPE SUBSQUID NETWORK WILL BE SOON AVAILABLE FOR KAKAROT
-    kind: evm.subsquid
-    url: https://v2.archive.subsquid.io/network/ethereum-mainnet
-    node: mainnet_node
 
 contracts:
   some_contract:
     kind: evm
-    address: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+    address: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
     typename: not_typed
 
 indexes:
   evm_index:
     kind: evm.subsquid.transactions
-    datasource: mock_subsquid
+    datasource: mainnet_node
     handlers:
       - callback: on_output_transaction
         from: some_contract
-    node_only: true
-    last_level: 3500
+    last_level: 4631
+
 
 database:
   kind: sqlite
-  path: /tmp/kakarot.sqlite
+  path: data/kakarot.sqlite
 ```
 
 Now it's time to generate directories and files required for the project:
