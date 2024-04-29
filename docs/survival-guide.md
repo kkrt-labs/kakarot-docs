@@ -48,6 +48,8 @@ the necessary links and information to navigate the Testnet well.
 
 ## Contract Address Book
 
+- WETH: 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
+
 🚧 The following contract addresses are coming soon.
 
 - AMMs
