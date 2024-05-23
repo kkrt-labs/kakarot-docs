@@ -20,8 +20,7 @@ the necessary links and information to navigate the Testnet well.
 
 - Explorers:
   - Routescan: https://sepolia.kakarotscan.org
-  - Chainlens - with a focus on token & NFT analytics:
-    https://sepolia-explorer.kakarot.org
+  - Blockscout: https://sepolia-blockscout.kakarot.org
 - Public RPC: https://sepolia-rpc.kakarot.org
 
 ### Community Channels
