@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Kakarot zkEVM",
-  tagline: "The Ethereum Renaissance",
+  tagline: "Ethereum's Second Frontier",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -83,7 +83,7 @@ const config: Config = {
             },
             {
               label: "Introduction",
-              to: "/quick-start",
+              to: "/",
             },
           ],
         },
@@ -110,7 +110,9 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Kakarot zkEVM, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${
+        new Date().getFullYear()
+      } Kakarot zkEVM, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
