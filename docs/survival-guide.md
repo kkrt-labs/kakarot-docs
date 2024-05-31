@@ -47,7 +47,7 @@ the necessary links and information to navigate the Testnet well.
 
 ## Contract Address Book
 
-- WETH: 0x1c106f8AF138eF67Ef08dDbEc5b6B8C4B09c33dc
+- WETH: 0x761612F0C8bdf8cF10e6F10045E2Ca7cbffBa8A3
 
 🚧 The following contract addresses are coming soon.
 
