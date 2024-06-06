@@ -11,8 +11,6 @@ the necessary links and information to navigate the Testnet well.
 
 ### Development Resources
 
-- [Registration Page for Kakarot Testnet Invite-Only Phase](https://sepolia-faucet.kakarot.org/login):
-  Access requires a whitelist invite.
 - [Faucet 🚰](https://sepolia-faucet.kakarot.org): Claim testnet ETH daily.
   Whitelist required.
 
