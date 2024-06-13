@@ -7,13 +7,46 @@ sidebar_position: 3
 Although Kakarot is Ethereum-compatible and aims to support the latest features
 of Ethereum (e.g.
 [Cancun new opcodes](https://blog.ethereum.org/2024/01/10/goerli-dencun-announcement)),
-it still has some edge case behaviors. They are listed below:
+it still has some edge case behaviors.
 
-| Item                   | Ethereum                                                     | Kakarot                                                                                                                                                                                                        |
-| ---------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BLOCKHASH              | Get the hash of one of the 256 most recent complete blocks   | The last 10 blocks are not available, and 0 is returned instead                                                                                                                                                |
-| BLOBBASEFEE            | Get the current data-blob base-fee                           | Return 0 as there are no blobs on Kakarot                                                                                                                                                                      |
-| BLOBHASH               | Get blob versioned hashes at index                           | Return 0 as there are no blobs on Kakarot                                                                                                                                                                      |
-| Block hash computation | keccak256(RLP.encode(Block Header))                          | [pedersen(Starknet Block Header)](https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/header/)                                                                               |
-| State root computation | Root of state keccak-MPT                                     | [poseidon(root of contract pedersen-MPT, root of contract class pedersen-MPT)](https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/starknet-state/)                          |
+## EVM opcodes
+
+The below opcodes differ in behavior between Ethereum and Kakarot:
+
+| Item        | Ethereum                                                   | Kakarot                                                         |
+| ----------- | ---------------------------------------------------------- | --------------------------------------------------------------- |
+| BLOCKHASH   | Get the hash of one of the 256 most recent complete blocks | The last 10 blocks are not available, and 0 is returned instead |
+| BLOBBASEFEE | Get the current data-blob base-fee                         | Return 0 as there are no blobs on Kakarot                       |
+| BLOBHASH    | Get blob versioned hashes at index                         | Return 0 as there are no blobs on Kakarot                       |
+
+## EVM precompiles
+
+The below precompiles differ in behavior between Ethereum and Kakarot:
+
+| Item             | Ethereum                                                                                                                                                                | Kakarot       |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| ecAdd            | Point addition (ADD) on the elliptic curve `alt_bn128`                                                                                                                  | Not supported |
+| ecMul            | Scalar multiplication (MUL) on the elliptic curve `alt_bn128`                                                                                                           | Not supported |
+| ecPairing        | Bilinear function on groups on the elliptic curve `alt_bn128`                                                                                                           | Not supported |
+| Point evaluation | Verify p(z) = y given commitment that corresponds to the polynomial p(x) and a KZG proof. Also verify that the provided commitment matches the provided versioned_hash. | Not supported |
+
+## EVM State computation
+
+The below state computation differs in behavior between Ethereum and Kakarot:
+
+| Item                   | Ethereum                                                     | Kakarot                                                                                                                                                                                                          |
+| ---------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Block hash computation | keccak256(RLP.encode(Block Header))                          | [pedersen(Starknet Block Header)](https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/header/)                                                                                 |
+| State root computation | Root of state keccak-MPT                                     | [poseidon(root of contract pedersen-MPT, root of contract class pedersen-MPT)](https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/starknet-state/)                            |
 | Transaction receipt    | Transaction receipt is available once a transaction is mined | Transaction receipt is available once a transaction is processed and guaranteed to be mined. This means that blockhash field of the receipt is optional and will be non-null only once the transaction is mined. |
+
+## Transaction reversion
+
+In Ethereum, a transaction can be reverted if validation parameters are
+incorrect, if it runs out of gas or if it fails on the contract level. Since
+Kakarot is a layer 2 solution, it has additional reasons for reverting a
+transaction, which is the possible reversion of the underlying Cairo program.
+
+This can happen for example if the Cairo program runs out of execution steps.
+Such a failure can cause some discrepancies with the Ethereum behavior, causing
+tooling such as `cast run TRANSACTION_HASH` to behave differently.
