@@ -44,9 +44,13 @@ The below state computation differs in behavior between Ethereum and Kakarot:
 
 In Ethereum, a transaction can be reverted if validation parameters are
 incorrect, if it runs out of gas or if it fails on the contract level. Since
-Kakarot is a layer 2 solution, it has additional reasons for reverting a
-transaction, which is the possible reversion of the underlying Cairo program.
+Kakarot is a layer 2 solution, additional revert reasons can occur during the
+transaction. We have currently identified the below issues which can cause some
+problems with the traditional EVM tooling:
 
-This can happen for example if the Cairo program runs out of execution steps.
-Such a failure can cause some discrepancies with the Ethereum behavior, causing
-tooling such as `cast run TRANSACTION_HASH` to behave differently.
+- **Cairo VM out of steps**: in Kakarot, we execute the EVM as a Cairo program,
+  which can run out of execution steps. This causes the Cairo program itself
+  (and not the EVM) to run out of "gas", causing a reversion of the transaction.
+  This is a discrepancy with Ethereum's behavior, causing tooling such as
+  `cast run TRANSACTION_HASH` to give a different result than the outcome on
+  Kakarot.
