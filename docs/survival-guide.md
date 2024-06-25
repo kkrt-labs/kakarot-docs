@@ -17,7 +17,7 @@ the necessary links and information to navigate the Testnet well.
 ### Testnet Tools
 
 - Explorers:
-  - Routescan: https://sepolia.kakarotscan.org
+  - Routescan: https://sepolia.kakarotscan.org/
   - Blockscout: https://sepolia-blockscout.kakarot.org
 - Public RPC: https://sepolia-rpc.kakarot.org
 
