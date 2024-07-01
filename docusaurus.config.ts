@@ -52,7 +52,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Kakarot",
+      title: "",
       logo: {
         alt: "Kakarot zkEVM",
         src: "img/logo.svg",
