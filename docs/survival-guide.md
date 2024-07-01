@@ -46,6 +46,8 @@ the necessary links and information to navigate the Testnet well.
 ## Contract Address Book
 
 - WETH: 0x761612F0C8bdf8cF10e6F10045E2Ca7cbffBa8A3
+- [Arachnid deterministic deployment proxy](https://github.com/Arachnid/deterministic-deployment-proxy):
+  0x4e59b44847b379578588920ca78fbf26c0b4956c
 
 🚧 The following contract addresses are coming soon.
 
