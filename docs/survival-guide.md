@@ -48,6 +48,10 @@ the necessary links and information to navigate the Testnet well.
 - WETH: 0x761612F0C8bdf8cF10e6F10045E2Ca7cbffBa8A3
 - [Arachnid deterministic deployment proxy](https://github.com/Arachnid/deterministic-deployment-proxy):
   0x4e59b44847b379578588920ca78fbf26c0b4956c
+- [Multicall3](https://github.com/mds1/multicall):
+  0xcA11bde05977b3631167028862bE2a173976CA11
+- [CreateX](https://github.com/pcaversaccio/createx):
+  0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed
 
 🚧 The following contract addresses are coming soon.
 
