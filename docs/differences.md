@@ -54,3 +54,10 @@ problems with the traditional EVM tooling:
   This is a discrepancy with Ethereum's behavior, causing tooling such as
   `cast run TRANSACTION_HASH` to give a different result than the outcome on
   Kakarot.
+
+## Additional limits
+
+- **Call gas limit**: the gas limit for a `eth_call` is limited to 7 millions
+  gas on Kakarot. This limit is due to the fact that the block gas limit is
+  capped at 7 million gas currently on Kakarot. We will increase this limit in
+  the future.
