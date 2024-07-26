@@ -160,7 +160,7 @@ compatibility with the EVM. This includes for instance
 developers on Starknet need to get used to using new tools and technologies, but
 do not have to suffer from EVM legacy. Kakarot places a somewhat different bet:
 the EVM will remain the dominant common abstraction layer in crypto and Cairo
-will be the strongest zkVM. Therefore, it makes sense to both:
+will be the strongest ZK-VM. Therefore, it makes sense to both:
 
 - build an EVM in 2024,
 - bet on the Cairo powerhouse for the years to come.
@@ -172,8 +172,8 @@ Note that a ZK-EVM also designates the software used to prove
 Ethereum-compatible transactions and blocks. It refers to code that is used to
 go from an EVM transaction to a zero-knowledge (or validity) proof. The
 implementation of a ZK-EVM can be either low-level (at the so-called "circuits"
-level) or high-level (use an intermediary zkVM). [Scroll](https://scroll.io/) is
-an embodiment of the former, and Kakarot of the latter.
+level) or high-level (use an intermediary ZK-VM). [Scroll](https://scroll.io/)
+is an embodiment of the former, and Kakarot of the latter.
 
 TL;DR: Execute Ethereum-compatible transactions on a Layer 2, prove them
 off-chain, bundle and verify them on Ethereum L1. Save on costs, benefit from an

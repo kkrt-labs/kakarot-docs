@@ -155,7 +155,7 @@ and now Starknet.
 
 Diagram - How to build a ZK-EVM:
 
-![Different ways to build a ZK-EVM: low-level circuits or intermediary zkVM](../../static/diagrams/how_to_build_a_zkevm.png)
+![Different ways to build a ZK-EVM: low-level circuits or intermediary ZK-VM](../../static/diagrams/how_to_build_a_zkevm.png)
 
 We believe that in focusing only on engineering, our approach is scalable and
 sustainable.
