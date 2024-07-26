@@ -1,17 +1,35 @@
 # Precompiles
 
-Precompiles are predefined smart contracts with unique addresses that provide specific functionality. Instead of being executed at the EVM bytecode level, they are executed natively by the Kakarot client in Cairo. The main purpose of precompiles is to introduce functions that would be computationally expensive if executed in EVM bytecode, as well as functions that facilitate interaction between Layer 1 (L1) and Layer 2 (L2). By having these functions natively integrated into the Kakarot client, they can be optimized for better performance.
+Precompiles are predefined smart contracts with unique addresses that provide
+specific functionality. Instead of being executed at the EVM bytecode level,
+they are executed natively by the Kakarot client in Cairo. The main purpose of
+precompiles is to introduce functions that would be computationally expensive if
+executed in EVM bytecode, as well as functions that facilitate interaction
+between Layer 1 (L1) and Layer 2 (L2). By having these functions natively
+integrated into the Kakarot client, they can be optimized for better
+performance.
 
-Kakarot supports some of the precompiles available in Ethereum, and also provides L2-specific precompiles. These L2-specific precompiles have methods that smart contracts can call in a way similar to calling Solidity functions. One of these precompiles is the _Cairo Precompile_.
+Kakarot supports some of the precompiles available in Ethereum, and also
+provides L2-specific precompiles. These L2-specific precompiles have methods
+that smart contracts can call in a way similar to calling Solidity functions.
+One of these precompiles is the _Cairo Precompile_.
 
 # Cairo Precompile
 
-Kakarot zkEVM being a Starknet appchain, it is possible to run Cairo
-Contracts on Kakarot. The address `75001` is reserved for the "Cairo precompile", that lets you invoke Cairo contracts from EVM contracts. To interact with the Cairo precompile, you can use the solidity [CairoLib](https://github.com/kkrt-labs/kakarot/blob/a63c25a55d1990716bb9bbd7fdbd2c1cf069db44/solidity_contracts/src/CairoPrecompiles/CairoLib.sol#L4) from your solidity contracts.
+Kakarot ZK-EVM being a Starknet appchain, it is possible to run Cairo Contracts
+on Kakarot. The address `75001` is reserved for the "Cairo precompile", that
+lets you invoke Cairo contracts from EVM contracts. To interact with the Cairo
+precompile, you can use the solidity
+[CairoLib](https://github.com/kkrt-labs/kakarot/blob/a63c25a55d1990716bb9bbd7fdbd2c1cf069db44/solidity_contracts/src/CairoPrecompiles/CairoLib.sol#L4)
+from your solidity contracts.
 
-Calling a Cairo contract from an EVM contract is a restricted operation that requires the caller contract to be whitelisted. This measure is in place to prevent attempts to call a Cairo contract whose execution would panic and be un-provable. To whitelist a contract, please contact the Kakarot team.
+Calling a Cairo contract from an EVM contract is a restricted operation that
+requires the caller contract to be whitelisted. This measure is in place to
+prevent attempts to call a Cairo contract whose execution would panic and be
+un-provable. To whitelist a contract, please contact the Kakarot team.
 
-The CairoLib library contains methods to call a Cairo contract or class, either via `call` or `staticcall`.
+The CairoLib library contains methods to call a Cairo contract or class, either
+via `call` or `staticcall`.
 
 > Note: The behavior of high-level `calls` in solidity prevents calling
 > precompiles directly. As such, the library uses the low-level `call` and
@@ -70,8 +88,8 @@ the Starknet appchain. The method takes three arguments:
 
 - `contractAddress` or `classHash`: The address of the Cairo contract to call /
   class hash to call
-- `functionSelector`: The selector of the function to call, as the `sn_keccak` of
-  the entrypoint name: `keccak("entrypoint_name") % 2^250`
+- `functionSelector`: The selector of the function to call, as the `sn_keccak`
+  of the entrypoint name: `keccak("entrypoint_name") % 2^250`
 - `data`: The calldata to pass to the Cairo contract, as individual bytes.
 
 Contract developers can use this library to interact with the Cairo precompiles.

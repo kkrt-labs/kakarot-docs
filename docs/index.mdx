@@ -3,35 +3,37 @@ title: Quick start - 5 minutes overview
 sidebar_position: 1
 ---
 
-## What is Kakarot zkEVM?
+## What is Kakarot ZK-EVM?
 
-Kakarot is a zkEVM built in [Cairo](https://www.cairo-lang.org/), the provable
+Kakarot is a ZK-EVM built in [Cairo](https://www.cairo-lang.org/), the provable
 language that powers [Starknet](https://starkware.co/starknet/) and all the
-StarknetOS chains (also called CairoVM chains, or Starknet appchains). Kakarot
-is an Ethereum-compatible Layer 2, a
-[so-called zkRollup](https://ethereum.org/developers/docs/scaling/zk-rollups).
-Beyond compatibility, Kakarot strives to push more innovations to the L2 space,
-and to add new features such as native account abstraction to the EVM. Kakarot's
-driving ethos is to _Prove, Scale and Innovate_ 🥕.
+StarknetOS chains (also called CairoVM chains, or Starknet appchains).
 
-## How can I use Kakarot zkEVM?
+Kakarot enhances and extends Starknet by making it a DualVM environment.
+Starknet effectively becomes EVM compatible; allowing the use of both CairoVM
+and EVM for builders & users. Additionally, Kakarot
+[strives to push more innovations](https://ethcc.io/archive/Kakarot-zkEVM-beyond-ethereum-compatibility)
+to the L2 space, participating in governance initiative such as
+[Rollup Improvement Proposals](https://github.com/ethereum/RIPs) (RIPs) and
+[Rollcall](https://github.com/ethereum/pm/issues/1071#issuecomment-2221171582).
 
-Kakarot zkEVM is an Ethereum-compatible rollup, which means as a user and
-developer, you can interact with Kakarot zkEVM in the same way you would
-interact with Ethereum mainnet or any other Ethereum-based chain (use Metamask,
-Rainbow, build with Foundry or Hardhat, etc.). **Change the RPC URL and it "just
-works"**. That being said, Kakarot is still in alpha testnet phase 🚧 and
-unexpected behavior may still occur. Reach out to us on
+## How can I use Kakarot ZK-EVM?
+
+As a user and developer, you can interact with Kakarot ZK-EVM in the same way
+you would interact with Ethereum mainnet or any other Ethereum-based chain (use
+Metamask, Rainbow, build with Foundry or Hardhat, etc.). **Change the RPC URL
+and it "just works"**. That being said, Kakarot is still in alpha testnet phase
+🚧 and unexpected behavior may still occur. Reach out to us on
 [discord](https://discord.gg/kakarotzkevm) to report bugs 🐛.
 
-Though we aim at no difference at all between Ethereum and Kakarot zkEVM — and
+Though we aim at no difference at all between Ethereum and Kakarot ZK-EVM — and
 we actually work toward passing 100% of the
 [official Ethereum Foundation test](https://github.com/ethereum/tests) — they
 are currently some small difference recorded in the
 [differences between Kakarot and Ethereum](differences) page in this
 documentation website.
 
-### As a user, how can I interact with Kakarot zkEVM?
+### As a user, how can I interact with Kakarot ZK-EVM?
 
 Head over to the [survival guide](survival-guide) section to find useful links
 for our alpha testnet. Again, change the network to Kakarot in your wallet and
@@ -82,15 +84,15 @@ export const AddKakarotNetwork = () => (
 Or by add a new network manually to Metamask: open the Metamask extension. Click
 "Add Network". Choose "Add a Network Manually". Then fill the fields:
 
-| Category       | Value                           |
-| -------------- | ------------------------------- |
-| Network Name   | Kakarot Sepolia                 |
-| RPC URL        | https://sepolia-rpc.kakarot.org |
-| Chain Id       | 1802203764                      |
-| Symbol         | ETH                             |
+| Category       | Value                            |
+| -------------- | -------------------------------- |
+| Network Name   | Kakarot Sepolia                  |
+| RPC URL        | https://sepolia-rpc.kakarot.org  |
+| Chain Id       | 1802203764                       |
+| Symbol         | ETH                              |
 | Block Explorer | https://sepolia.kakarotscan.org/ |
 
-### As a developer, how can I build on Kakarot zkEVM?
+### As a developer, how can I build on Kakarot ZK-EVM?
 
 For developers as well, change the RPC URL, and it should "just work".
 
@@ -99,25 +101,25 @@ In case you encounter some unknown bug or want to discuss new features, you can:
 - Join our discord and get support: https://discord.gg/kakarotzkevm
 - Ask us anything on Twitter: https://twitter.com/KakarotZkEvm
 
-## What differentiates Kakarot zkEVM?
+## What differentiates Kakarot ZK-EVM?
 
-Kakarot is the only provable implementation of the EVM written in a Turing
-complete zero-knowledge Domain Specific Language (zkDSL): Cairo.
+1. Agile and lightweight: Kakarot is built on Cairo, a provable VM, enabling
+   cryptography efforts to be separated from engineering. As a result, Kakarot's
+   code is lean, highly auditable and easily extensible. A strong example is the
+   [EOF set of Ethereum Improvement Proposals probably coming in Pectra](https://x.com/_weidai/status/1816019532890444216),
+   which are easy to implement for Kakarot and extremely hard for circuit-based
+   ZK-EVMs.
 
-In this sense, Kakarot is closer to an EVM client than other zkEVMs. This makes
-our approach flexible. Lower-level approaches that rely on cryptographic
-primitives (e.g. circuits) are tailor-made for a specific EVM version. They are
-way harder to maintain and adapt. For instance, because our approach is
-adaptable & sustainable, we can support all Ethereum hardforks from day 1 and
-thus minimize EVM fragmentation.
+2. Interoperable and modular: Kakarot enables a DualVM environment on Starknet
+   chains. Solidity contracts can call into Cairo programs, and vice-versa.
+   Starknet apps can gain exposure to EVM ecosystems, and EVM apps can finally
+   land on Starknet for minimal costs.
 
-In the upcoming years, as Ethereum undergoes more upgrades, a zkEVM needs to be
-easily adaptable to be sustainable. That is, it needs to easily incorporate the
-changes of Ethereum mainnet. Otherwise, the very point of zkEVMs would be
-partially lost: use zk to improve Ethereum, but in the meantime block every
-other future evolution of the protocol and stick to a given version. Developers
-would have to be careful about their Solidity or Vyper compiler versions. Users
-would need to consult a difference checklist.
+3. Highly-performant and future-proof: Building on Kakarot means benefiting from
+   all the future upgrades of the Cairo stack. For instance, with the release of
+   [Stwo](https://github.com/starkware-libs/stwo), an extremely fast prover by
+   Starkware expected in early 2025, Kakarot apps will directly experience
+   100-1,000x improvements in ZK proof generation performance.
 
 For a deep-dive into the Kakarot design, check out
 [the architecture overview](architecture/understanding-zkevm).
