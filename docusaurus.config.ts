@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Kakarot zkEVM",
+  title: "Kakarot ZK-EVM",
   tagline: "Ethereum's Second Frontier",
   favicon: "img/favicon.ico",
 
@@ -54,7 +54,7 @@ const config: Config = {
     navbar: {
       title: "",
       logo: {
-        alt: "Kakarot zkEVM",
+        alt: "Kakarot ZK-EVM",
         src: "img/logo.svg",
       },
       items: [
@@ -112,7 +112,7 @@ const config: Config = {
       ],
       copyright: `Copyright © ${
         new Date().getFullYear()
-      } Kakarot zkEVM, Inc. Built with Docusaurus.`,
+      } Kakarot ZK-EVM, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

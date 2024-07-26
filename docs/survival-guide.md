@@ -40,9 +40,10 @@ the necessary links and information to navigate the Testnet well.
   - Official Ethereum Foundation test suite implementation:
     - ef-tests: https://github.com/kkrt-labs/ef-tests
   - Documentation repository: https://github.com/kkrt-labs/kakarot-docs
-  - Build On Kakarot repository template: https://github.com/kkrt-labs/build-on-kakarot
+  - Build On Kakarot repository template:
+    https://github.com/kkrt-labs/build-on-kakarot
 
-- [Kakarot zkEVM Talks playlist](https://www.youtube.com/watch?v=5BndqgugKOU&list=PLF3T1714MyKDwjjA8oHizXAdLNx62ka5U)
+- [Kakarot ZK-EVM Talks playlist](https://www.youtube.com/watch?v=5BndqgugKOU&list=PLF3T1714MyKDwjjA8oHizXAdLNx62ka5U)
 
 ## Contract Address Book
 

@@ -1,11 +1,11 @@
 ---
-title: Kakarot zkEVM under the hood
+title: Kakarot ZK-EVM under the hood
 sidebar_position: 2
 ---
 
-## Kakarot, the zkEVM built in Cairo
+## Kakarot, the ZK-EVM built in Cairo
 
-Kakarot is a zkEVM built in [Cairo](https://www.cairo-lang.org/), the provable
+Kakarot is a ZK-EVM built in [Cairo](https://www.cairo-lang.org/), the provable
 language that powers [Starknet](https://starkware.co/starknet/) and all the
 StarknetOS chains (also called CairoVM chains, or Starknet appchains). Kakarot
 is an Ethereum-compatible Layer 2, a
@@ -39,7 +39,7 @@ scale Ethereum.
 
 ### Kakarot is an implementation of the EVM in Cairo
 
-Under the hood, Kakarot zkEVM is a Cairo program that implement the EVM
+Under the hood, Kakarot ZK-EVM is a Cairo program that implement the EVM
 instruction set. The EVM is the blueprint, Kakarot implements it in Cairo.
 
 > Cairo is the first Turing-complete language for creating provable programs for
@@ -52,9 +52,9 @@ sort of "comes for free" just by using this language and not, say, rust.
 
 ---
 
-Diagram - Kakarot zkEVM high-level architecture:
+Diagram - Kakarot ZK-EVM high-level architecture:
 
-![Kakarot zkEVM architecture diagram](../../static/diagrams/kakarot_zkevm.png)
+![Kakarot ZK-EVM architecture diagram](../../static/diagrams/kakarot_zkevm.png)
 
 ---
 
@@ -68,9 +68,9 @@ The Kakarot core EVM, i.e. as said previously our new EVM implementation, is
 deployed on an underlying StarknetOS chain. This means that Kakarot is running
 as a set of Cairo smart contracts on a CairoVM-powered chain. This CairoVM chain
 is "invisible" to the user. Users only interact with Kakarot through the RPC
-layer in an Ethereum-compatible way. The only exposed interface in Kakarot zkEVM
-is the Ethereum JSON-RPC specification. In the future, we could leverage this to
-allow developers to write their own Cairo-precompiled contracts, as
+layer in an Ethereum-compatible way. The only exposed interface in Kakarot
+ZK-EVM is the Ethereum JSON-RPC specification. In the future, we could leverage
+this to allow developers to write their own Cairo-precompiled contracts, as
 [Arbitrum Stylus](https://arbitrum.io/stylus) introduced Rust, C, and C++
 together with the EVM.
 
@@ -93,7 +93,7 @@ emerge, such as Lambdaclass'
 This will enable multi-proof security and increase robustness of the Kakarot
 network.
 
-In Kakarot zkEVM, the design choices regarding EVM programs and their Cairo
+In Kakarot ZK-EVM, the design choices regarding EVM programs and their Cairo
 equivalents are explained below. They are subject to architecture changes over
 time. **🎙️ Disclaimer 🎙️: all these designs choices are invisible to the user**:
 
@@ -131,9 +131,10 @@ EVM chain.
 
 ## The difference between Kakarot and other zkEVMs
 
-Kakarot zkEVM is probably the most high-level zkEVM. On the scale of maths
+Kakarot ZK-EVM is probably the most high-level ZK-EVM. On the scale of maths
 language and polynomials to human understandable language, Kakarot is closer to
-human readable language than any other zkEVM. This matters to users in two ways:
+human readable language than any other ZK-EVM. This matters to users in two
+ways:
 
 - Because Kakarot is built on Cairo, Kakarot as a codebase is extremely slim (an
   order of magnitude lighter than other zkEVMs) and thus extremely easy to
@@ -152,9 +153,9 @@ and now Starknet.
 
 ---
 
-Diagram - How to build a zkEVM:
+Diagram - How to build a ZK-EVM:
 
-![Different ways to build a zkEVM: low-level circuits or intermediary zkVM](../../static/diagrams/how_to_build_a_zkevm.png)
+![Different ways to build a ZK-EVM: low-level circuits or intermediary zkVM](../../static/diagrams/how_to_build_a_zkevm.png)
 
 We believe that in focusing only on engineering, our approach is scalable and
 sustainable.
