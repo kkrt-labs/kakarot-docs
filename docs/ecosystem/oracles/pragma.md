@@ -1,12 +1,10 @@
 # Pragma Oracle
 
-## What is Pragma?
+Pragma is the decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography. We partner with the biggest market makers and the most liquid exchanges who sign and timestamp their own high quality, robust data and send it directly on-chain.
 
-Your smart contracts are decentralized, transparent and composable. Of course they are, because you believe in a world where society’s crucial applications are accessible to anyone, where transparency replaces backroom dealings and trustless software makes middlemen obsolete. But unless you're using Pragma already, you are accessing real world data using an off-chain, trusted, black box oracle.
+Our feeds are live on 🥕 Kakarot, where they leverage the power of the ZK-EVM. Our code has been audited by leading security researchers at Zellic (also audited Pyth, LayerZero, 1Inch & more) and we have more audits coming up soon.
 
-Pragma is the decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography. We partner with the biggest market makers and the most liquid exchanges who sign and timestamp their own high quality, robust data and send it directly on-chain. Our feeds are live in public alpha on Starknet, where they are powering the next generation of ambitious protocols such as zkLend, Nostra, Carmine and more. Our code has been audited by leading security researchers at Zellic (also audited Pyth, LayerZero, 1Inch & more) and we have more audits coming up soon.
-
-Pragma is currently deployed on 🥕 Kakarot:
+We are currently deployed on the following addresses:
 
 | Network | Address                                                           |
 | ------- | ----------------------------------------------------------------- |
@@ -14,7 +12,7 @@ Pragma is currently deployed on 🥕 Kakarot:
 | Mainnet | **⏳ Soon**                                                       |
 
 
-## Architecture
+# Architecture
 
 The V1 of the Pragma Oracle consists of three smart contracts, that each play a role in making the oracle easy to use and robust.
 
@@ -24,31 +22,32 @@ The first is the Publisher Registry, which is the most static. This is designed 
 
 The second is the Oracle implementation and its proxy, which are also designed to be updated only as frequently as absolutely necessary. This is the contract which protocols use, and the one to which publishers publish. In the background, it coordinates the Publisher Registry and the Oracle contract implementation(s). The implementation contains the logic for storing and aggregating specific key/value data streams.
 
-#### Aggregation
+## Aggregation
 
 ![pragma_v1_aggregation](https://i.ibb.co/ZXmp89H/Screenshot-2023-11-21-at-10-10-30.png)
 
 Our system incorporates multiple publishers, each responsible for providing data from various sources. To determine the price for a given source, we consider the prices submitted by all these publishers. Our approach involves conducting an initial on-chain aggregation based on the median of these prices. This median value then becomes the established price for that particular source.
 
-This aggregation process is triggered when one of the aggregation functions, as outlined in the 'Consuming Data' section, is called. During this process, users have the flexibility to choose their preferred method of aggregation for the sources. This choice allows them to tailor the final price calculation according to their specific needs or criteria. By utilizing this method of aggregation, we enhance the security of the final price determination, making it less vulnerable to manipulation, as it incorporates a broad and balanced range of data from multiple publishers.
+This aggregation process is triggered when one of the aggregation functions is called. During this process, users have the flexibility to choose their preferred method of aggregation for the sources. This choice allows them to tailor the final price calculation according to their specific needs or criteria.
 
+By utilizing this method of aggregation, we enhance the security of the final price determination, making it less vulnerable to manipulation, as it incorporates a broad and balanced range of data from multiple publishers.
 
-## Consuming Data Feed
+# Consuming our Data Feeds
 
 You can find the list of supported assets in our main documentation [here](https://docs.pragma.build/Resources/Cairo%201/data-feeds/supported-assets).
 
-#### Sample code
+### Sample code
 
 If you are just trying to get started with our price feeds, see the self-contained code snippets below. If you'd like to use more advanced oracle functions please see the further information below. You can find a full sample data feed consumer contract [here](https://github.com/Astraly-Labs/pragma-hack/tree/master) and the full Oracle interface specification is available [here](https://github.com/Astraly-Labs/pragma-oracle/blob/main/src/oracle/oracle.cairo).
 
 
-### (Optional) Add Pragma as a dependency to your scarb/snforge project
+## (Optional) Add Pragma as a dependency to your scarb/snforge project
 
 ```sh
 scarb add pragma_lib --git https://github.com/astraly-labs/pragma-lib
 ```
 
-### Retrieve the BTC/USD Spot Median Price
+## Retrieve the BTC/USD Spot Median Price
 
 ```rust
 use pragma_lib::abi::{IPragmaABIDispatcher, IPragmaABIDispatcherTrait};
@@ -70,7 +69,7 @@ let oracle_address : ContractAddress = contract_address_const::<0x3a99b4b9f71100
 let price = get_asset_price_median(oracle_address, DataType::SpotEntry(KEY));
 ```
 
-### SOL/USD Spot Average Price, filtered by sources
+## SOL/USD Spot Average Price, filtered by sources
 
 ```rust
 use pragma_lib::abi::{IPragmaABIDispatcher, IPragmaABIDispatcherTrait};
@@ -100,7 +99,7 @@ sources.append(BINANCE);
 let price = get_asset_price_average(oracle_address, DataType::SpotEntry(KEY), sources.span());
 ```
 
-### BTC/USD Future Price
+## BTC/USD Future Price
 
 ```rust
 use pragma_lib::abi::{IPragmaABIDispatcher, IPragmaABIDispatcherTrait};
@@ -123,6 +122,6 @@ let expiration_timestamp = 1691395615; //in seconds
 let price = get_asset_price_median(oracle_address, DataType::FutureEntry((KEY, expiration_timestamp)));
 ```
 
-### Learn more
+# Learn more
 
 If you want to learn more about Pragma, feel free to check our [public documentation](https://docs.pragma.build/).
