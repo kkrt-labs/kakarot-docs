@@ -6,10 +6,10 @@ Our data feeds are live on 🥕 Kakarot, where they leverage the power of the ZK
 
 We are currently deployed on the following addresses:
 
-| Network | Address                                                           |
-| ------- | ----------------------------------------------------------------- |
-| Sepolia | 0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764 |
-| Mainnet | **⏳ Soon**                                                       |
+| Network | Cairo Address                                                     | PragmaCaller Solidity Interface                                                                                                  |
+| ------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Sepolia | 0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764 | [0x7491cA3699701a187C1a17308338Ad0bA258B082](https://sepolia.kakarotscan.org/address/0x7491cA3699701a187C1a17308338Ad0bA258B082) |
+| Mainnet | **⏳ Soon**                                                        | **⏳ Soon**                                                                                                                       |
 
 # Consuming our Data Feeds
 
@@ -17,19 +17,15 @@ You can get started with Pragma in just a few minutes. This guide will walk you 
 
 You can find the list of supported assets in our main documentation [here](https://docs.pragma.build/Resources/Cairo%201/data-feeds/supported-assets).
 
-## Solidity
-
-TODO...
-
 ## Cairo
 
-#### 0. (Optional) Add Pragma as a dependency to your scarb/snforge project
+### 0. (Optional) Add Pragma as a dependency to your scarb/snforge project
 
 ```sh
 scarb add pragma_lib --git https://github.com/astraly-labs/pragma-lib
 ```
 
-#### 1. Retrieve the BTC/USD Spot Median Price
+### 1. Retrieve the BTC/USD Spot Median Price
 
 ```rust
 use pragma_lib::abi::{IPragmaABIDispatcher, IPragmaABIDispatcherTrait};
@@ -40,15 +36,76 @@ use starknet::contract_address::contract_address_const;
 // felt252 conversion of "BTC/USD", can also write const KEY : felt252 = 'BTC/USD';
 const KEY :felt252 = 18669995996566340;
 
-fn get_asset_price_median(oracle_address: ContractAddress, asset : DataType) -> u128  {
-    let oracle_dispatcher = IPragmaABIDispatcher{contract_address : oracle_address};
-    let output : PragmaPricesResponse= oracle_dispatcher.get_data(asset, AggregationMode::Median(()));
+fn get_asset_price_median(oracle_address: ContractAddress, asset: DataType) -> u128  {
+    let oracle_dispatcher = IPragmaABIDispatcher{contract_address: oracle_address};
+    let output: PragmaPricesResponse = oracle_dispatcher.get_data(asset, AggregationMode::Median(()));
     return output.price;
 }
 
 // USAGE
-let oracle_address : ContractAddress = contract_address_const::<0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764>();
+let oracle_address: ContractAddress = contract_address_const::<0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764>();
 let price = get_asset_price_median(oracle_address, DataType::SpotEntry(KEY));
+```
+
+## Solidity
+
+The Pragma Oracle cairo contract has been whitelisted by Kakarot - thus it is possible to call it directly in your Solidity contracts using the [PragmaCaller](https://github.com/kkrt-labs/kakarot/blob/main/solidity_contracts%2Fsrc%2FCairoPrecompiles%2FPragmaCaller.sol) interface!
+
+### 1. Define the PragmaCaller interface
+
+```typescript
+interface IPragmaCaller {
+    enum DataType {
+        SpotEntry,
+        FuturesEntry,
+        GenericEntry
+    }
+
+    struct DataRequest {
+        DataType dataType;
+        uint256 pairId;
+        uint256 expirationTimestamp;
+    }
+
+    struct PragmaPricesResponse {
+        uint256 price;
+        uint256 decimals;
+        uint256 last_updated_timestamp;
+        uint256 num_sources_aggregated;
+        uint256 maybe_expiration_timestamp;
+    }
+
+    function getDataMedianSpot(DataRequest memory request) external view returns (PragmaPricesResponse memory);
+}
+```
+
+### 2. Call the PragmaCaller interface in your contract
+
+```typescript
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.7.0 <0.9.0;
+
+interface IPragmaCaller {
+    // ... (include the interface definition from step 1)
+}
+
+contract MyContract {
+    IPragmaCaller public pragmaCaller;
+
+    constructor(address _pragmaCallerAddress) {
+        pragmaCaller = IPragmaCaller(_pragmaCallerAddress);
+    }
+
+    function callGetDataMedianSpot(uint256 pairId) external view returns (IPragmaCaller.PragmaPricesResponse memory) {
+        IPragmaCaller.DataRequest memory request = IPragmaCaller.DataRequest({
+            dataType: IPragmaCaller.DataType.SpotEntry,
+            pairId: pairId,
+            expirationTimestamp: 0 // Not used for SpotEntry
+        });
+
+        return pragmaCaller.getDataMedianSpot(request);
+    }
+}
 ```
 
 ### Learn more
