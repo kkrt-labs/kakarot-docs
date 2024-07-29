@@ -6,52 +6,46 @@ Our data feeds are live on 🥕 Kakarot, where they leverage the power of the ZK
 
 We are currently deployed on the following addresses:
 
-| Network | Cairo Address                                                     | PragmaCaller Solidity Contract                                                                                                  |
+| Network | Cairo Address                                                     | PragmaCaller Solidity Contract                                                                                                   |
 | ------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Sepolia | 0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764 | [0x7491cA3699701a187C1a17308338Ad0bA258B082](https://sepolia.kakarotscan.org/address/0x7491cA3699701a187C1a17308338Ad0bA258B082) |
 | Mainnet | **⏳ Soon**                                                        | **⏳ Soon**                                                                                                                       |
 
 # Consuming our Data Feeds
 
-You can get started with Pragma in just a few minutes. This guide will walk you through the process of consuming data from Pragma's oracle network, either from a Solidity or Cairo contract.
-
-You can find the list of supported assets in our main documentation [here](https://docs.pragma.build/Resources/Cairo%201/data-feeds/supported-assets).
-
-## Cairo
-
-### 0. (Optional) Add Pragma as a dependency to your scarb/snforge project
-
-```sh
-scarb add pragma_lib --git https://github.com/astraly-labs/pragma-lib
-```
-
-### 1. Retrieve the BTC/USD Spot Median Price
-
-```rust
-use pragma_lib::abi::{IPragmaABIDispatcher, IPragmaABIDispatcherTrait};
-use pragma_lib::types::{AggregationMode, DataType, PragmaPricesResponse};
-use starknet::ContractAddress;
-use starknet::contract_address::contract_address_const;
-
-// felt252 conversion of "BTC/USD", can also write const KEY : felt252 = 'BTC/USD';
-const KEY: felt252 = 18669995996566340;
-
-fn get_asset_price_median(oracle_address: ContractAddress, asset: DataType) -> u128  {
-    let oracle_dispatcher = IPragmaABIDispatcher{contract_address: oracle_address};
-    let output: PragmaPricesResponse = oracle_dispatcher.get_data(asset, AggregationMode::Median(()));
-    return output.price;
-}
-
-// USAGE
-let oracle_address: ContractAddress = contract_address_const::<0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764>();
-let price = get_asset_price_median(oracle_address, DataType::SpotEntry(KEY));
-```
+You can get started with Pragma in just a few minutes. This guide will walk you through the process of consuming data from Pragma's oracle network.
 
 ## Solidity
 
+To use our Price feeds, you have two choices:
+
+## 1. Use our port of the `ChainlinkAggregatorV3` interface
+
+If you already have an existing process working with Chainlink data feeds, you can use our `PragmaAggregatorV3` interfaces (under the hood, it calls the `PragmaCaller`).
+
+The list of supported assets is:
+
+| Ticker     | Pair ID                  | Decimals | Sepolia                                                                                                                          | Mainnet    |
+| ---------- | ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| BTC/USD    | 18669995996566340        | 8        | [0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc](https://sepolia.kakarotscan.org/address/0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc) | **⏳ Soon** |
+| ETH/USD    | 19514442401534788        | 8        | [0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14](https://sepolia.kakarotscan.org/address/0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14) | **⏳ Soon** |
+| WBTC/USD   | 6287680677296296772      | 8        | [0x330ec0B08B74a4F34Fd76B0917A55169885624Be](https://sepolia.kakarotscan.org/address/0x330ec0B08B74a4F34Fd76B0917A55169885624Be) | **⏳ Soon** |
+| USDC/USD   | 6148332971638477636      | 6        | [0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811](https://sepolia.kakarotscan.org/address/0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811) | **⏳ Soon** |
+| USDT/USD   | 6148333044652921668      | 6        | [0x4604A5b10818638F751829A580362eD5a42b9E5E](https://sepolia.kakarotscan.org/address/0x4604A5b10818638F751829A580362eD5a42b9E5E) | **⏳ Soon** |
+| WSTETH/USD | 412383036120118613857092 | 8        | [0xa3C78F0fd24523d1D5A70e47086343A445976911](https://sepolia.kakarotscan.org/address/0xa3C78F0fd24523d1D5A70e47086343A445976911) | **⏳ Soon** |
+| STRK/USD   | 6004514686061859652      | 8        | [0x52880cAe955C88546134e7394B4305c2fA79faB8](https://sepolia.kakarotscan.org/address/0x52880cAe955C88546134e7394B4305c2fA79faB8) | **⏳ Soon** |
+
+#### 1. TODO: tutorial
+
+TODO.
+
+## 2. Directly call the `PragmaCaller`
+
 The Pragma Oracle cairo contract has been integrated by Kakarot - thus it is possible to call it directly in your Solidity contracts using the [PragmaCaller](https://github.com/kkrt-labs/kakarot/blob/main/solidity_contracts%2Fsrc%2FCairoPrecompiles%2FPragmaCaller.sol) interface!
 
-### 1. Define the PragmaCaller interface
+The complete list of [supported assets](https://docs.pragma.build/Resources/Cairo%201/data-feeds/supported-assets) can be found in our documentation: just grab the pair id and you're good to go!
+
+#### 1. Define the PragmaCaller interface
 
 ```typescript
 interface IPragmaCaller {
@@ -79,7 +73,7 @@ interface IPragmaCaller {
 }
 ```
 
-### 2. Retrieve the BTC/USD Spot Median Price
+#### 2. Retrieve the BTC/USD Spot Median Price
 
 ```typescript
 interface IPragmaCaller {
