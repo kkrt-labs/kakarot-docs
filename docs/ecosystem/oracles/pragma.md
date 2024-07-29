@@ -34,7 +34,7 @@ use starknet::ContractAddress;
 use starknet::contract_address::contract_address_const;
 
 // felt252 conversion of "BTC/USD", can also write const KEY : felt252 = 'BTC/USD';
-const KEY :felt252 = 18669995996566340;
+const KEY: felt252 = 18669995996566340;
 
 fn get_asset_price_median(oracle_address: ContractAddress, asset: DataType) -> u128  {
     let oracle_dispatcher = IPragmaABIDispatcher{contract_address: oracle_address};
@@ -88,6 +88,7 @@ interface IPragmaCaller {
 
 contract CallerExample {
     IPragmaCaller private pragmaCaller;
+    // felt252 conversion of "BTC/USD";
     uint256 constant BTC_USD_FEED = 18669995996566340;
 
     constructor(address pragmaCallerAddress) {
