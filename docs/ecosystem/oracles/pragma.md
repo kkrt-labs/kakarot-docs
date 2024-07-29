@@ -88,7 +88,7 @@ interface IPragmaCaller {
 
 contract CallerExample {
     IPragmaCaller private pragmaCaller;
-    // felt252 conversion of "BTC/USD";
+    // ascii conversion of "BTC/USD";
     uint256 constant BTC_USD_FEED = 18669995996566340;
 
     constructor(address pragmaCallerAddress) {
