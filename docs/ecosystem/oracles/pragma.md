@@ -2,7 +2,7 @@
 
 Pragma is the decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography. We partner with the biggest market makers and the most liquid exchanges who sign and timestamp their own high quality, robust data and send it directly on-chain.
 
-Our data feeds are live on 🥕 Kakarot, where they leverage the power of the ZK-EVM. Our code has been audited by leading security researchers at Zellic (also audited Pyth, LayerZero, 1Inch & more) and we have more audits coming up soon.
+Our data feeds are live on 🥕 Kakarot, where they leverage the power of the ZK-EVM. Our code has been audited by leading security researchers at Nethermind and we have more audits coming up soon.
 
 We are currently deployed on the following addresses:
 
@@ -82,9 +82,6 @@ interface IPragmaCaller {
 ### 2. Call the PragmaCaller interface in your contract
 
 ```typescript
-// SPDX-License-Identifier: MIT
-pragma solidity >=0.7.0 <0.9.0;
-
 interface IPragmaCaller {
     // ... (include the interface definition from step 1)
 }
