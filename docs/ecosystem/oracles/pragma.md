@@ -49,7 +49,7 @@ let price = get_asset_price_median(oracle_address, DataType::SpotEntry(KEY));
 
 ## Solidity
 
-The Pragma Oracle cairo contract has been whitelisted by Kakarot - thus it is possible to call it directly in your Solidity contracts using the [PragmaCaller](https://github.com/kkrt-labs/kakarot/blob/main/solidity_contracts%2Fsrc%2FCairoPrecompiles%2FPragmaCaller.sol) interface!
+The Pragma Oracle cairo contract has been integrated by Kakarot - thus it is possible to call it directly in your Solidity contracts using the [PragmaCaller](https://github.com/kkrt-labs/kakarot/blob/main/solidity_contracts%2Fsrc%2FCairoPrecompiles%2FPragmaCaller.sol) interface!
 
 ### 1. Define the PragmaCaller interface
 
