@@ -86,16 +86,16 @@ interface IPragmaCaller {
     // ... (include the interface definition from step 1)
 }
 
-contract MyContract {
-    IPragmaCaller public pragmaCaller;
+contract CallerExample {
+    IPragmaCaller private pragmaCaller;
     uint256 constant BTC_USD_FEED = 18669995996566340;
 
     constructor(address pragmaCallerAddress) {
         pragmaCaller = IPragmaCaller(pragmaCallerAddress);
     }
 
-    function callGetDataMedianSpot(uint256 pairId) public view returns (IPragmaCaller.PragmaPricesResponse memory) {
-        IPragmaCaller.DataRequest calldata request = IPragmaCaller.DataRequest(
+    function getDataMedianSpot(uint256 pairId) public view returns (IPragmaCaller.PragmaPricesResponse memory) {
+        IPragmaCaller.DataRequest memory request = IPragmaCaller.DataRequest(
             IPragmaCaller.DataType.SpotEntry,
             pairId,
             0
@@ -103,12 +103,14 @@ contract MyContract {
         return pragmaCaller.getDataMedianSpot(request);
     }
 
-    function btcMedianPrice() public view returns (uint256) {
-        IPragmaCaller.PragmaPricesResponse memory response = callGetDataMedianSpot(BTC_USD_FEED);
+    function getBtcMedianPrice() public view returns (uint256) {
+        IPragmaCaller.PragmaPricesResponse memory response = getDataMedianSpot(BTC_USD_FEED);
         return response.price;
     }
 }
 ```
+
+An example has been deployed [here](https://sepolia.kakarotscan.org/address/0x9acb5dbE6B9E3569f4Ab8b4bf8E09F7efC330A26).
 
 ### Learn more
 
