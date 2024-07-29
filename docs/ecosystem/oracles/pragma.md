@@ -35,9 +35,44 @@ The list of supported assets is:
 | WSTETH/USD | 412383036120118613857092 | 8        | [0xa3C78F0fd24523d1D5A70e47086343A445976911](https://sepolia.kakarotscan.org/address/0xa3C78F0fd24523d1D5A70e47086343A445976911) | **⏳ Soon** |
 | STRK/USD   | 6004514686061859652      | 8        | [0x52880cAe955C88546134e7394B4305c2fA79faB8](https://sepolia.kakarotscan.org/address/0x52880cAe955C88546134e7394B4305c2fA79faB8) | **⏳ Soon** |
 
-#### 1. TODO: tutorial
+#### 1. Define the PragmaAggregator interface
 
-TODO.
+```typescript
+interface IPragmaAggregatorV3 {
+    function latestRoundData() external view returns (
+        uint80 roundId,
+        int256 answer,
+        uint256 startedAt,
+        uint256 updatedAt,
+        uint80 answeredInRound
+    );
+}
+```
+
+#### 2. Retrieve the BTC/USD Spot Median Price
+
+```typescript
+contract PragmaDataConsumer {
+    IPragmaAggregatorV3 internal dataFeed;
+
+    constructor() {
+        dataFeed = IPragmaAggregatorV3(
+            0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc // BTC/USD Pragma Interface
+        );
+    }
+
+    function getPragmaDataFeedLatestPrice() public view returns (int256) {
+        (
+            /* uint80 roundID */,
+            int256 price,
+            /*uint256 startedAt*/,
+            /*uint256 timeStamp*/,
+            /*uint80 answeredInRound*/
+        ) = dataFeed.latestRoundData();
+        return price;
+    }
+}
+```
 
 ## 2. Directly call the `PragmaCaller`
 
