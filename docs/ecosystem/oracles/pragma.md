@@ -79,7 +79,7 @@ interface IPragmaCaller {
 }
 ```
 
-### 2. Call the PragmaCaller interface in your contract
+### 2. Retrieve the BTC/USD Spot Median Price
 
 ```typescript
 interface IPragmaCaller {
@@ -88,19 +88,24 @@ interface IPragmaCaller {
 
 contract MyContract {
     IPragmaCaller public pragmaCaller;
+    uint256 constant BTC_USD_FEED = 18669995996566340;
 
-    constructor(address _pragmaCallerAddress) {
-        pragmaCaller = IPragmaCaller(_pragmaCallerAddress);
+    constructor(address pragmaCallerAddress) {
+        pragmaCaller = IPragmaCaller(pragmaCallerAddress);
     }
 
-    function callGetDataMedianSpot(uint256 pairId) external view returns (IPragmaCaller.PragmaPricesResponse memory) {
-        IPragmaCaller.DataRequest memory request = IPragmaCaller.DataRequest({
-            dataType: IPragmaCaller.DataType.SpotEntry,
-            pairId: pairId,
-            expirationTimestamp: 0 // Not used for SpotEntry
-        });
-
+    function callGetDataMedianSpot(uint256 pairId) public view returns (IPragmaCaller.PragmaPricesResponse memory) {
+        IPragmaCaller.DataRequest calldata request = IPragmaCaller.DataRequest(
+            IPragmaCaller.DataType.SpotEntry,
+            pairId,
+            0
+        );
         return pragmaCaller.getDataMedianSpot(request);
+    }
+
+    function btcMedianPrice() public view returns (uint256) {
+        IPragmaCaller.PragmaPricesResponse memory response = callGetDataMedianSpot(BTC_USD_FEED);
+        return response.price;
     }
 }
 ```
