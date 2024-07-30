@@ -5,26 +5,46 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800;900&display=swap");
+
 :root {
-  --ifm-color-primary: #25bbae;
-  --ifm-color-primary-dark: #28a89e;
-  --ifm-color-primary-darker: #219e94;
-  --ifm-color-primary-darkest: #147c73;
-  --ifm-color-primary-light: #2bc7ba;
-  --ifm-color-primary-lighter: #39d9cc;
-  --ifm-color-primary-lightest: #45e2d5;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #003d29;
+  --ifm-color-primary-dark: #003725;
+  --ifm-color-primary-darker: #003423;
+  --ifm-color-primary-darkest: #002b1d;
+  --ifm-color-primary-light: #00432d;
+  --ifm-color-primary-lighter: #00462f;
+  --ifm-color-primary-lightest: #004f35;
+  --ifm-background-color: #fffadb;
+  --ifm-footer-color: #1b1b1d;
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-font-family-base: "Inter Tight", sans-serif;
+  --ifm-font-family-monospace: "Inter Tight", monospace;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #76efe4;
-  --ifm-color-primary-dark: #60d4ca;
-  --ifm-color-primary-darker: #5accc2;
-  --ifm-color-primary-darkest: #4fc2b8;
-  --ifm-color-primary-light: #82f1e7;
-  --ifm-color-primary-lighter: #92f9f0;
-  --ifm-color-primary-lightest: #a4fff7;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+[data-theme="dark"] {
+  --ifm-color-primary: #fffadb;
+  --ifm-color-primary-dark: #fff3ac;
+  --ifm-color-primary-darker: #fff094;
+  --ifm-color-primary-darkest: #ffe64d;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-background-color: #003d29;
+}
+
+body {
+  font-family: var(--ifm-font-family-base);
+}
+
+/* Set footer background color to Green */
+.footer {
+  background-color: var(--ifm-footer-color);
+}
+
+/* Adjust the footer text color for better contrast with the Green background */
+:hover.footer__link-item,
+.footer__copyright {
+  color: #fffadb;
 }
