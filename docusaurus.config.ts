@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Kakarot ZK-EVM",
   tagline: "Ethereum's Second Frontier",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   // Set the production url of your site here
   url: "https://docs.kakarot.org",
@@ -50,12 +50,14 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/kkrt-docs.png",
     navbar: {
-      title: "",
       logo: {
         alt: "Kakarot ZK-EVM",
         src: "img/logo.svg",
+        style: {
+          width: "128px",
+        },
       },
       items: [
         {
@@ -110,9 +112,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${
-        new Date().getFullYear()
-      } Kakarot ZK-EVM, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Kakarot ZK-EVM, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
