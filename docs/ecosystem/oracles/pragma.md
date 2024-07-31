@@ -9,7 +9,7 @@ We are currently deployed on the following addresses:
 | Network | Cairo Address                                                     | PragmaCaller Solidity Contract                                                                                                   |
 | ------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Kakarot Sepolia | 0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764 | [0x7491cA3699701a187C1a17308338Ad0bA258B082](https://sepolia.kakarotscan.org/address/0x7491cA3699701a187C1a17308338Ad0bA258B082) |
-| Mainnet | **⏳ Soon**                                                        | **⏳ Soon**                                                                                                                       |
+| Kakarot Mainnet | **⏳ Soon**                                                        | **⏳ Soon**                                                                                                                       |
 
 # Consuming our Data Feeds
 
