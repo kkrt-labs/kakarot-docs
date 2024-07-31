@@ -25,7 +25,7 @@ If you already have an existing process working with Chainlink data feeds, you c
 
 The list of supported assets is:
 
-| Ticker     | Pair ID                  | Decimals | Sepolia                                                                                                                          | Mainnet    |
+| Ticker     | Pair ID                  | Decimals | Kakarot Sepolia                                                                                                                          | Mainnet    |
 | ---------- | ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | BTC/USD    | 18669995996566340        | 8        | [0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc](https://sepolia.kakarotscan.org/address/0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc) | **⏳ Soon** |
 | ETH/USD    | 19514442401534788        | 8        | [0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14](https://sepolia.kakarotscan.org/address/0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14) | **⏳ Soon** |
