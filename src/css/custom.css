@@ -16,7 +16,6 @@
   --ifm-color-primary-lighter: #00462f;
   --ifm-color-primary-lightest: #004f35;
   --ifm-background-color: #fffadb;
-  --ifm-footer-color: #1b1b1d;
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-font-family-base: "Inter Tight", sans-serif;
   --ifm-font-family-monospace: "Inter Tight", monospace;
@@ -38,9 +37,10 @@ body {
   font-family: var(--ifm-font-family-base);
 }
 
-/* Set footer background color to Green */
+/* Set footer background color to dark body shade */
 .footer {
-  background-color: var(--ifm-footer-color);
+  background-color: #1b1b1d;
+  border-top: grey solid 0.5px;
 }
 
 /* Adjust the footer text color for better contrast with the Green background */
