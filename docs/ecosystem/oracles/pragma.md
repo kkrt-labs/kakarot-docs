@@ -6,10 +6,10 @@ Our data feeds are live on 🥕 Kakarot, where they leverage the power of the ZK
 
 We are currently deployed on the following addresses:
 
-| Network | Cairo Address                                                     | PragmaCaller Solidity Contract                                                                                                   |
-| ------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Kakarot Sepolia | 0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764 | [0x7491cA3699701a187C1a17308338Ad0bA258B082](https://sepolia.kakarotscan.org/address/0x7491cA3699701a187C1a17308338Ad0bA258B082) |
-| Kakarot Mainnet | **⏳ Soon**                                                        | **⏳ Soon**                                                                                                                       |
+| Network         | PragmaCaller Solidity Contract                                                                                                   | Native Starknet Address (ignore if you're an EVM developer)       |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Kakarot Sepolia | [0x7491cA3699701a187C1a17308338Ad0bA258B082](https://sepolia.kakarotscan.org/address/0x7491cA3699701a187C1a17308338Ad0bA258B082) | 0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764 |
+| Kakarot Mainnet | **⏳ Soon**                                                                                                                       | **⏳ Soon**                                                        |
 
 # Consuming our Data Feeds
 
@@ -25,15 +25,15 @@ If you already have an existing process working with Chainlink data feeds, you c
 
 The list of supported assets is:
 
-| Ticker     | Pair ID                  | Decimals | Kakarot Sepolia                                                                                                                          | Mainnet    |
-| ---------- | ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| BTC/USD    | 18669995996566340        | 8        | [0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc](https://sepolia.kakarotscan.org/address/0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc) | **⏳ Soon** |
-| ETH/USD    | 19514442401534788        | 8        | [0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14](https://sepolia.kakarotscan.org/address/0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14) | **⏳ Soon** |
-| WBTC/USD   | 6287680677296296772      | 8        | [0x330ec0B08B74a4F34Fd76B0917A55169885624Be](https://sepolia.kakarotscan.org/address/0x330ec0B08B74a4F34Fd76B0917A55169885624Be) | **⏳ Soon** |
-| USDC/USD   | 6148332971638477636      | 6        | [0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811](https://sepolia.kakarotscan.org/address/0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811) | **⏳ Soon** |
-| USDT/USD   | 6148333044652921668      | 6        | [0x4604A5b10818638F751829A580362eD5a42b9E5E](https://sepolia.kakarotscan.org/address/0x4604A5b10818638F751829A580362eD5a42b9E5E) | **⏳ Soon** |
-| WSTETH/USD | 412383036120118613857092 | 8        | [0xa3C78F0fd24523d1D5A70e47086343A445976911](https://sepolia.kakarotscan.org/address/0xa3C78F0fd24523d1D5A70e47086343A445976911) | **⏳ Soon** |
-| STRK/USD   | 6004514686061859652      | 8        | [0x52880cAe955C88546134e7394B4305c2fA79faB8](https://sepolia.kakarotscan.org/address/0x52880cAe955C88546134e7394B4305c2fA79faB8) | **⏳ Soon** |
+| Ticker     | Pair ID                  | Decimals | Kakarot Sepolia                                                                                                                  | Kakarot Mainnet |
+| ---------- | ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| BTC/USD    | 18669995996566340        | 8        | [0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc](https://sepolia.kakarotscan.org/address/0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc) | **⏳ Soon**      |
+| ETH/USD    | 19514442401534788        | 8        | [0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14](https://sepolia.kakarotscan.org/address/0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14) | **⏳ Soon**      |
+| WBTC/USD   | 6287680677296296772      | 8        | [0x330ec0B08B74a4F34Fd76B0917A55169885624Be](https://sepolia.kakarotscan.org/address/0x330ec0B08B74a4F34Fd76B0917A55169885624Be) | **⏳ Soon**      |
+| USDC/USD   | 6148332971638477636      | 6        | [0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811](https://sepolia.kakarotscan.org/address/0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811) | **⏳ Soon**      |
+| USDT/USD   | 6148333044652921668      | 6        | [0x4604A5b10818638F751829A580362eD5a42b9E5E](https://sepolia.kakarotscan.org/address/0x4604A5b10818638F751829A580362eD5a42b9E5E) | **⏳ Soon**      |
+| WSTETH/USD | 412383036120118613857092 | 8        | [0xa3C78F0fd24523d1D5A70e47086343A445976911](https://sepolia.kakarotscan.org/address/0xa3C78F0fd24523d1D5A70e47086343A445976911) | **⏳ Soon**      |
+| STRK/USD   | 6004514686061859652      | 8        | [0x52880cAe955C88546134e7394B4305c2fA79faB8](https://sepolia.kakarotscan.org/address/0x52880cAe955C88546134e7394B4305c2fA79faB8) | **⏳ Soon**      |
 
 #### 1. Define the PragmaAggregator interface
 
