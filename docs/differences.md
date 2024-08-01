@@ -29,6 +29,7 @@ The below precompiles differ in behavior between Ethereum and Kakarot:
 | ecMul            | Scalar multiplication (MUL) on the elliptic curve `alt_bn128`                                                                                                           | Not supported |
 | ecPairing        | Bilinear function on groups on the elliptic curve `alt_bn128`                                                                                                           | Not supported |
 | Point evaluation | Verify p(z) = y given commitment that corresponds to the polynomial p(x) and a KZG proof. Also verify that the provided commitment matches the provided versioned_hash. | Not supported |
+| P256 Verification (secp256r1 - [RIP-7212](https://github.com/ethereum/RIPs/blob/master/RIPS/rip-7212.md)) | Not Supported | P256 is used in Apple’s Secure Enclave, Webauthn, Android Keychain. Enables many use cases such as cheap FaceID signature verification for smart wallets on Kakarot. |
 
 ## EVM State computation
 
