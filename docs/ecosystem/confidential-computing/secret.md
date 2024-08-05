@@ -14,6 +14,6 @@ To start, check out Secret Network’s [Confidential Computing Layer](https://sc
 
 3. [Supported Networks](https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/supported-networks) - provides a list of gateway contract addresses. This is how your Lisk application will communicate with Secret.
 
-##Get Support
+## Get Support
 
 To get CCL development help, you can join the Secret Network Discord at https://scrt.network/discord or Telegram at https://scrt.network/SCRTCommunity. You can also [get in touch](mailto:info@scrt.network) with the Secret Network devrel team directly.
