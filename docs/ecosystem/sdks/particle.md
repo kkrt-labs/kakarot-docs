@@ -62,7 +62,7 @@ export default function RootLayout({
               // Set to false to remove the embedded wallet modal
               visible: true,
               customStyle: {
-                // Locks the chain selector to IoTeX mainnet and testnet
+                // Locks the chain selector to Kakarot Sepolia testnet
                 supportChains: [KakarotSepolia],
               },
             },
@@ -77,11 +77,11 @@ export default function RootLayout({
 
 ```
 
-Once the SDK is configured, you can implement social logins and Account Abstraction (AA) in your application. Particle Auth provides various hooks to facilitate these features.
+After configuring the SDK, you can integrate social logins and Account Abstraction (AA) into your application. Particle Auth, in conjunction with Particle’s AA SDK, offers a variety of hooks to streamline the implementation of these features.
 
 ### Social Logins
 
-To enable social logins, use the `useConnect` hook, which provides the `connect` function to streamline the process of creating a wallet through social authentication. The following code demonstrates how to connect a user using the Kakarot Sepolia chain:
+To enable social logins, use the `useConnect` hook, which provides the `connect()` function to simplify the process of generating a wallet through a selected social login method. The following code snippet demonstrates how to connect a user to an application built on Kakarot Sepolia:
 
 ```jsx
 import { useConnect } from '@particle-network/auth-core-modal';
@@ -100,9 +100,12 @@ await connect({
 
 The AA SDK allows you to set up and configure smart accounts. Here's how you can configure a smart account using Particle Network:
 
-```jsx
+```tsx
 import { SmartAccount } from '@particle-network/aa';
+import { useEthereum } from "@particle-network/auth-core-modal";
 import { KakarotSepolia } from '@particle-network/chains';
+
+const { provider } = useEthereum();
 
 // Set up and configure the smart account
 const smartAccount = new SmartAccount(provider, {
@@ -120,7 +123,6 @@ const smartAccount = new SmartAccount(provider, {
     },
   },
 });
-
 ```
 
 In this setup:
@@ -128,9 +130,33 @@ In this setup:
 - **SmartAccount**: This class is used to create a smart account that leverages an instance of [SimpleAccount](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/SimpleAccount.sol).
 - **aaOptions**: This field specifies the version and chain IDs for the account contracts, allowing you to configure the smart account with specific blockchain settings. Here, we're using version 2.0.0 and targeting the Kakarot Sepolia chain.
 
-> Find a complete implementation example on the [Kakarot-Particle-AA Demo](https://github.com/Particle-Network/kakarot-auth-aa-demo/blob/main/kakarot-particle-aa-nextjs/src/app/page.tsx).
+Upon logging in, the embedded wallet modal included with Particle Auth will be accessible through the button at the bottom right unless otherwise specified through the wallet within `AuthCoreContextProvider`.
 
-Upon logging in, the embedded wallet model included with Particle Auth will be accessible through the button at the bottom right unless otherwise specified through the wallet within `AuthCoreContextProvider`.
+### Use `ethers` to send transactions via the Smart Account
+
+You can wrap the smart account in an `ethers` instance to facilitate transactions. Here’s an example:
+
+```tsx
+import { AAWrapProvider, SendTransactionMode } from "@particle-network/aa";
+import { ethers, type Eip1193Provider } from "ethers";
+
+const ethersProvider = new ethers.BrowserProvider(
+      new AAWrapProvider(smartAccount, SendTransactionMode.Gasless) as Eip1193Provider,
+      "any"
+    );
+    
+const executeTxEthers = async () => {
+  const signer = await ethersProvider.getSigner();
+  const txResponse = await signer.sendTransaction({
+    to: recipientAddress,
+    value: ethers.parseEther("0.01"),
+  });
+  const txReceipt = await txResponse.wait();
+  console.log(txReceipt.hash);
+};
+```
+
+> Find a complete implementation example on the [Kakarot-Particle-AA Demo](https://github.com/Particle-Network/kakarot-auth-aa-demo/blob/main/kakarot-particle-aa-nextjs/src/app/page.tsx).
 
 ## Learn More
 
