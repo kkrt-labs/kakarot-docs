@@ -115,8 +115,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Kakarot ZK-EVM, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.nightOwlLight,
+      darkTheme: prismThemes.oneDark,
     },
   } satisfies Preset.ThemeConfig,
 };
