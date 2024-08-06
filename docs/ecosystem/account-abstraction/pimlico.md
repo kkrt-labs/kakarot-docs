@@ -35,6 +35,6 @@ To get started, check out our comprehensive [documentation](https://docs.pimlico
 If you have any questions or issues, contact us on the following platforms:
 
 - [Website](https://www.pimlico.io/)
-- [Telegram](t.me/pimlicohq)
+- [Telegram](https://t.me/pimlicohq)
 
 
