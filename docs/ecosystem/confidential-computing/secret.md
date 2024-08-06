@@ -10,9 +10,9 @@ To start, check out Secret Network’s [Confidential Computing Layer](https://sc
 
 1. [Basics](https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/basics) - explains the cross-chain communication technologies used, and how to connect a MetaMask wallet to Secret Network.
 
-2. [Use-cases](https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/usecases) - provides tutorials showing how to build various types of EVM applications using Secret’s CCL. All of these tutorials can be used to deploy a contract on Etherlink.
+2. [Use-cases](https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/usecases) - provides tutorials showing how to build various types of EVM applications using Secret’s CCL. All of these tutorials can be used to deploy a contract on Kakarot.
 
-3. [Supported Networks](https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/supported-networks) - provides a list of gateway contract addresses. This is how your Lisk application will communicate with Secret.
+3. [Supported Networks](https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/ethereum-evm-developer-toolkit/supported-networks) - provides a list of gateway contract addresses. This is how your Kakarot EVM application will communicate with Secret.
 
 ## Get Support
 
