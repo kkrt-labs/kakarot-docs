@@ -55,10 +55,11 @@ the necessary links and information to navigate the Testnet well.
 - [CreateX](https://github.com/pcaversaccio/createx):
   0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed
 
+- USDc: [0x1B4C0bc8703D3af59322849bE01559fdb920c904](https://sepolia.kakarotscan.org/token/0x1B4C0bc8703D3af59322849bE01559fdb920c904)
+- USDt: [0x2BF1004D9e80ca087BD1e089d75bc8c471995aC1](https://sepolia.kakarotscan.org/token/0x2BF1004D9e80ca087BD1e089d75bc8c471995aC1)
+
 🚧 The following contract addresses are coming soon.
 
 - AMMs
-- USDc
-- USDt
 - WBTC
 - Oracles
