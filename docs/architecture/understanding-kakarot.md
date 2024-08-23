@@ -33,7 +33,7 @@ Starknet, as well as better interoperability with the broader Ethereum
 ecosystem.
 
 Discover the Kakarot explorer and other useful links on the
-[survival guide](../survival-guide) page.
+[survival guide](../survival-guide.md) page.
 
 Note: Kakarot is not a privacy chain. Zero-knowledge technologies can be used
 for two (non-excluding) purposes, Scaling or Privacy. Kakarot uses the former to
