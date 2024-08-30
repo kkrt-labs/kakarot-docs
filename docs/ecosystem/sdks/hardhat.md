@@ -1,14 +1,7 @@
 ---
-title: SDKs and Libraries
-sidebar_position: 3
+title: Hardhat
+sidebar_position: 1
 ---
-
-## Overview
-
-Welcome to the SDKs page! Find useful information about SDKs and Libraries (e.g.
-Foundry, Viem, Hardhat), such as recommended configuration or known issues.
-
-### Hardhat
 
 > [Hardhat](https://hardhat.org/) is a development environment for Ethereum
 > software. It consists of different components for editing, compiling,
