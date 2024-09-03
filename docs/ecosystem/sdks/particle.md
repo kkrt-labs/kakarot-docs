@@ -16,60 +16,107 @@ Integrate Particle Auth with Account Abstraction into your Next.js application i
 Install the necessary Particle Network packages using npm:
 
 ```bash
-npm install @particle-network/auth-core-modal @particle-network/auth-core @particle-network/chains @particle-network/aa ethers
+npm install @particle-network/authkit @particle-network/wallet viem@2 @particle-network/auth-core @particle-network/aa ethers
 ```
 
 ### Configuration
 
 Configure Particle Auth in your application using the `AuthCoreContextProvider` component. Obtain your `projectId`, `clientKey`, and `appId` from the [Particle Dashboard](https://dashboard.particle.network/).
 
+The `AuthCoreContextProvider` component manages the setup for Particle Auth. A recommended approach is to create a separate `AuthKit.tsx` file in the `src` directory, where you can configure and export a component to wrap your application with.
+
+After setting it up, use the exported component to wrap your main `App` component, ensuring that authentication is accessible across your entire application.
+
+Below is an example of configuring `AuthCoreContextProvider` and exporting the `ParticleAuthKit` component.
+
 ```jsx
 "use client";
+
+// Particle imports
+import { kakarotSepolia } from "@particle-network/authkit/chains"; // Chains are imported here
+import { AuthType } from "@particle-network/auth-core";
+import {
+  AuthCoreContextProvider,
+  PromptSettingType,
+} from "@particle-network/authkit";
+import { EntryPosition } from "@particle-network/wallet";
+
+export const ParticleAuthkit = ({ children }: React.PropsWithChildren) => {
+  return (
+    <AuthCoreContextProvider
+      options={{
+        projectId: process.env.NEXT_PUBLIC_PROJECT_ID!,
+        clientKey: process.env.NEXT_PUBLIC_CLIENT_KEY!,
+        appId: process.env.NEXT_PUBLIC_APP_ID!,
+        authTypes: [
+          AuthType.email,
+          AuthType.google,
+          AuthType.twitter,
+          AuthType.github,
+          AuthType.discord,
+        ],
+        themeType: "dark",
+
+        // List the chains you want to include
+        chains: [kakarotSepolia],
+
+        // Optionally, switches the embedded wallet modal to reflect a smart account
+        erc4337: {
+          name: "SIMPLE",
+          version: "2.0.0",
+        },
+
+        // You can prompt the user to set up extra security measures upon login or other interactions
+        promptSettingConfig: {
+          promptPaymentPasswordSettingWhenSign: PromptSettingType.first,
+          promptMasterPasswordSettingWhenLogin: PromptSettingType.first,
+        },
+
+        wallet: {
+          themeType: "dark", // Wallet modal theme
+          entryPosition: EntryPosition.TR,
+
+          // Set to false to remove the embedded wallet modal
+          visible: true,
+          customStyle: {
+            supportUIModeSwitch: true,
+            supportLanguageSwitch: false,
+          },
+        },
+      }}
+    >
+      {children}
+    </AuthCoreContextProvider>
+  );
+};
+
+```
+
+After configuring the `ParticleAuthKit` component, integrate it into your `layout.tsx` or `index.tsx` file:
+
+```tsx
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-// Particle imports
-import { KakarotSepolia } from "@particle-network/chains";
-import { AuthType } from "@particle-network/auth-core";
-import { AuthCoreContextProvider } from "@particle-network/auth-core-modal";
-
 const inter = Inter({ subsets: ["latin"] });
+
+import { ParticleAuthkit } from "./components/AuthKit";
+
+export const metadata: Metadata = {
+  title: "Particle Auth app",
+  description: "App leveraging Particle Auth for social logins.",
+};
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthCoreContextProvider
-          options={{
-            // All env variable must be defined at runtime
-            projectId: process.env.NEXT_PUBLIC_PROJECT_ID!,
-            clientKey: process.env.NEXT_PUBLIC_CLIENT_KEY!,
-            appId: process.env.NEXT_PUBLIC_APP_ID!,
-            themeType: "dark",
-            fiatCoin: "USD",
-            language: "en",
-
-            // Define UI elements for the smart account
-            erc4337: {
-              name: "SIMPLE",
-              version: "2.0.0",
-            },
-            wallet: {
-              // Set to false to remove the embedded wallet modal
-              visible: true,
-              customStyle: {
-                // Locks the chain selector to Kakarot Sepolia testnet
-                supportChains: [KakarotSepolia],
-              },
-            },
-          }}
-        >
-          {children}
-        </AuthCoreContextProvider>
+        <ParticleAuthkit>{children}</ParticleAuthkit>
       </body>
     </html>
   );
@@ -84,14 +131,14 @@ After configuring the SDK, you can integrate social logins and Account Abstracti
 To enable social logins, use the `useConnect` hook, which provides the `connect()` function to simplify the process of generating a wallet through a selected social login method. The following code snippet demonstrates how to connect a user to an application built on Kakarot Sepolia:
 
 ```jsx
-import { useConnect } from '@particle-network/auth-core-modal';
-import { KakarotSepolia } from '@particle-network/chains';
+import { useConnect } from  "@particle-network/authkit";
+import { kakarotSepolia } from "@particle-network/authkit/chains";
 
 // Handle user connection
 const { connect } = useConnect();
 
 await connect({
-  chain: KakarotSepolia,
+  chain: kakarotSepolia,
 });
 
 ```
@@ -102,8 +149,8 @@ The AA SDK allows you to set up and configure smart accounts. Here's how you can
 
 ```tsx
 import { SmartAccount } from '@particle-network/aa';
-import { useEthereum } from "@particle-network/auth-core-modal";
-import { KakarotSepolia } from '@particle-network/chains';
+import { useEthereum } from "@particle-network/authkit";
+import { kakarotSepolia } from "@particle-network/authkit/chains";
 
 const { provider } = useEthereum();
 
@@ -117,7 +164,7 @@ const smartAccount = new SmartAccount(provider, {
       SIMPLE: [
         {
           version: '2.0.0',
-          chainIds: [KakarotSepolia.id],
+          chainIds: [kakarotSepolia.id],
         },
       ],
     },
