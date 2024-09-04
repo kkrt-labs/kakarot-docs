@@ -78,7 +78,7 @@ contract PragmaDataConsumer {
 
 The Pragma Oracle cairo contract has been integrated by Kakarot - thus it is possible to call it directly in your Solidity contracts using the [PragmaCaller](https://github.com/kkrt-labs/kakarot/blob/main/solidity_contracts%2Fsrc%2FCairoPrecompiles%2FPragmaCaller.sol) interface!
 
-The complete list of [supported assets](https://docs.pragma.build/Resources/Cairo%201/data-feeds/supported-assets) can be found in our documentation: just grab the pair id and you're good to go!
+The complete list of [supported assets](https://docs.pragma.build/Resources/Starknet/data-feeds/supported-assets) can be found in our documentation: just grab the pair id and you're good to go!
 
 #### 1. Define the PragmaCaller interface
 
