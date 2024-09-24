@@ -44,9 +44,9 @@ Discover the Kakarot explorer and other useful links on the
   environment on Starknet Mainnet. This EVM environment is fully enshrined &
   embedded into Starknet L2. Kakarot transactions and blocks are abstractions
   over Starknet transactions and block under the hood.
-- Kakarot is not an L3, nor an L2. It is an EVM runtime inside Starknet.
-  Long-term, Kakarot Labs will rename the Kakarot initiative on Starknet:
-  "Starknet EVM" to reduce confusion.
+- Kakarot is not an L3, nor an L2. Kakarot Labs is launching an EVM runtime
+  inside Starknet. Long-term, Kakarot Labs will rename the Kakarot initiative on
+  Starknet: "Starknet EVM" to reduce confusion.
 - Kakarot is not privacy preserving. Zero-knowledge technologies can be used for
   two (non-excluding) purposes, Scaling or Privacy. The underlying proof system
   used by Cairo is not privacy-preserving.
