@@ -5,10 +5,9 @@ sidebar_position: 2
 
 ## Kakarot, the EVM proving engine built in Cairo
 
-Kakarot is a provable EVM built in [Cairo](https://www.cairo-lang.org/), the ZK
-domain specific language (DSL) that powers
-[Starknet](https://starkware.co/starknet/) and all the StarknetOS chains (also
-called CairoVM chains, or Starknet appchains).
+Kakarot is a provable EVM built on the
+[Cairo ZK-VM](https://www.cairo-lang.org/), Starkware's turing complete and
+efficient ZK-VM.
 
 ![Kakarot use cases](../../static/diagrams/kakarot_applications.png)
 
