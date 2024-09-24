@@ -1,15 +1,15 @@
 ---
-title: Quick start - 5 minutes overview
+title: Quick start - Kakarot on Starknet
 sidebar_position: 1
 ---
 
-## What is Kakarot ZK-EVM?
+## What is Kakarot on Starknet?
 
-Kakarot is a ZK-EVM built in [Cairo](https://www.cairo-lang.org/), the provable
-language that powers [Starknet](https://starkware.co/starknet/) and all the
-StarknetOS chains (also called CairoVM chains, or Starknet appchains).
+Kakarot Labs has developed an EVM built in [Cairo](https://www.cairo-lang.org/),
+the provable language that powers [Starknet](https://starkware.co/starknet/) and
+all the StarknetOS chains (also called CairoVM chains, or Starknet appchains).
 
-Kakarot enhances and extends Starknet by making it a DualVM environment.
+Kakarot enhances and extends Starknet by making it a MultiVM environment.
 Starknet effectively becomes EVM compatible; allowing the use of both CairoVM
 and EVM for builders & users. Additionally, Kakarot
 [strives to push more innovations](https://ethcc.io/archive/Kakarot-zkEVM-beyond-ethereum-compatibility)
@@ -17,14 +17,14 @@ to the L2 space, participating in governance initiative such as
 [Rollup Improvement Proposals](https://github.com/ethereum/RIPs) (RIPs) and
 [Rollcall](https://github.com/ethereum/pm/issues/1071#issuecomment-2221171582).
 
-## How can I use Kakarot ZK-EVM?
+## How can I use Kakarot?
 
-As a user and developer, you can interact with Kakarot ZK-EVM in the same way
-you would interact with Ethereum mainnet or any other Ethereum-based chain (use
-Metamask, Rainbow, build with Foundry or Hardhat, etc.). **Change the RPC URL
-and it "just works"**. That being said, Kakarot is still in alpha testnet phase
-🚧 and unexpected behavior may still occur. Reach out to us on
-[discord](https://discord.gg/kakarotzkevm) to report bugs 🐛.
+As a user and developer, you can interact with Starknet MultiVM thanks to
+Kakarot in the same way you would interact with Ethereum mainnet or any other
+Ethereum-based chain (use Metamask, Rainbow, build with Foundry or Hardhat,
+etc.). **Change the RPC URL and it "just works"**. That being said, Kakarot is
+still in alpha testnet phase 🚧 and unexpected behavior may still occur. Reach
+out to us on [discord](https://discord.gg/kakarotzkevm) to report bugs 🐛.
 
 Though we aim at no difference at all between Ethereum and Kakarot ZK-EVM — and
 we actually work toward passing 100% of the
@@ -33,7 +33,7 @@ are currently some small difference recorded in the
 [differences between Kakarot and Ethereum](differences) page in this
 documentation website.
 
-### As a user, how can I interact with Kakarot ZK-EVM?
+### As a user, how can I interact with Kakarot on Starknet?
 
 Head over to the [survival guide](survival-guide) section to find useful links
 for our alpha testnet. Again, change the network to Kakarot in your wallet and
@@ -101,16 +101,17 @@ In case you encounter some unknown bug or want to discuss new features, you can:
 - Join our discord and get support: https://discord.gg/kakarotzkevm
 - Ask us anything on Twitter: https://twitter.com/KakarotZkEvm
 
-## What differentiates Kakarot ZK-EVM?
+## What differentiates Kakarot on Starknet?
 
-1. Agile and lightweight: Kakarot is built on Cairo, a provable VM, enabling
-   cryptography efforts to be separated from engineering. As a result, Kakarot's
-   code is lean, highly auditable and easily extensible. A strong example is the
+1. Agile and lightweight: Kakarot's core EVM is built on Cairo, a provable VM,
+   enabling cryptography efforts to be separated from engineering. As a result,
+   Kakarot's code is lean, highly auditable and easily extensible. A strong
+   example is the
    [EOF set of Ethereum Improvement Proposals probably coming in Pectra](https://x.com/_weidai/status/1816019532890444216),
    which are easy to implement for Kakarot and extremely hard for circuit-based
    ZK-EVMs.
 
-2. Interoperable and modular: Kakarot enables a DualVM environment on Starknet
+2. Interoperable and modular: Kakarot enables a MultiVM environment on Starknet
    chains. Solidity contracts can call into Cairo programs, and vice-versa.
    Starknet apps can gain exposure to EVM ecosystems, and EVM apps can finally
    land on Starknet for minimal costs.

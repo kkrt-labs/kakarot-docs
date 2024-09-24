@@ -143,26 +143,31 @@ TL;DR - execute off-chain, verify on-chain, save on costs.
 
 ## What does it mean to prove the EVM: the transition from EVM to ZK-EVM?
 
-A ZK-EVM is simply a zk-Rollup that is compatible with Ethereum. This means that
-users should be able to interact with it as if they were interacting with
-Ethereum (or almost). For instance, users will use the same tools on a ZK-EVM
-than on Ethereum L1, such as the same wallet (e.g. Metamask). Developers' smart
-contracts should be deployable to a ZK-EVM without any (or little) changes.
+A ZK-EVM is simply an EVM implementation that is provable. To simplify, some
+people call Ethereum-compatible ZK-Rollups "ZK-EVMs". This means that users
+should be able to interact with it as if they were interacting with Ethereum (or
+almost). For instance, users will use the same tools on a Ethereum-compatible
+ZK-Rollup (e.g. Scroll) than on Ethereum L1, such as the same wallet (e.g.
+Metamask). Developers' smart contracts should be deployable to a ZK-EVM without
+any (or little) changes.
 
-This is powerful in the sense that the cryptography part is abstracted away.
-Users continue to interact with a high-level abstraction they're familiar with:
-the EVM. In that sense, the iterative "build on existing work" aspect of
-innovation is preserved in the Ethereum ecosystem.
+This is powerful in the sense that the cryptography and proving part is
+abstracted away. Users continue to interact with a high-level abstraction
+they're familiar with: the EVM. In that sense, the iterative "build on existing
+work" aspect of innovation is preserved in the Ethereum ecosystem. Builders are
+able to harness the scalability power of SNARKs and STARKs while being able to
+write Solidity and EVM compatible smart contract languages.
 
 Other actors in the zk-Rollup ecosystem have decided to start over and break
 compatibility with the EVM. This includes for instance
-[Starknet](https://www.starknet.io/en), also powered by the CairoVM. Users and
-developers on Starknet need to get used to using new tools and technologies, but
-do not have to suffer from EVM legacy. Kakarot places a somewhat different bet:
-the EVM will remain the dominant common abstraction layer in crypto and Cairo
-will be the strongest ZK-VM. Therefore, it makes sense to both:
+[Starknet](https://www.starknet.io/en), an non-EVM compatible L2 powered by the
+CairoVM. Users and developers on Starknet need to get used to using new tools
+and technologies, but benefit from lower costs since Cairo is specifically built
+for ZK. Kakarot places a somewhat different bet: the EVM will remain the
+dominant common abstraction layer in crypto and Cairo will be the strongest
+ZK-VM. Therefore, it makes sense to both:
 
-- build an EVM in 2024,
+- launch an EVM environment on Starknet in 2024, thus making it a MultiVM L2,
 - bet on the Cairo powerhouse for the years to come.
 
 Kakarot users stand to benefit both from the Ethereum network effect and the
