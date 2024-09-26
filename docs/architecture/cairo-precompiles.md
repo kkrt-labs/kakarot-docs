@@ -1,4 +1,9 @@
-# Precompiles
+---
+title: Starknet MultiVM - EVM precompiles
+sidebar_position: 3
+---
+
+## Precompiles
 
 Precompiles are predefined smart contracts with unique addresses that provide
 specific functionality. Instead of being executed at the EVM bytecode level,
@@ -14,7 +19,7 @@ provides L2-specific precompiles. These L2-specific precompiles have methods
 that smart contracts can call in a way similar to calling Solidity functions.
 One of these precompiles is the _Cairo Precompile_.
 
-# Cairo Precompile
+## Cairo Precompile
 
 Kakarot ZK-EVM being a Starknet appchain, it is possible to run Cairo Contracts
 on Kakarot. The address `75001` is reserved for the "Cairo precompile", that
@@ -70,8 +75,9 @@ library CairoLib {
 
 ```
 
-It contains two functions, `callContract` and `staticcallContract`, that allow the user to call a Cairo contract or class deployed on
-the Starknet appchain. The method takes three arguments:
+It contains two functions, `callContract` and `staticcallContract`, that allow
+the user to call a Cairo contract or class deployed on the Starknet appchain.
+The method takes three arguments:
 
 - `contractAddress` : The address of the Cairo contract to call
 - `functionSelector`: The selector of the function to call, as the `sn_keccak`

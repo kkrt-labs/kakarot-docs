@@ -19,13 +19,13 @@ lint:
   enabled:
     - checkov@3.2.255
     - git-diff-check
-    - markdownlint@0.41.0
+    - markdownlint@0.42.0
     - osv-scanner@1.8.5
     - oxipng@9.1.2
     - prettier@3.3.3
     - svgo@3.3.2
     - trivy@0.55.2
-    - trufflehog@3.82.2
+    - trufflehog@3.82.5
 actions:
   disabled:
     - trunk-announce
