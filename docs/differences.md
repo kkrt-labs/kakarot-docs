@@ -13,25 +13,22 @@ it still has some edge case behaviors.
 
 The below opcodes differ in behavior between Ethereum and Kakarot:
 
-| Item        | Ethereum                                                   | Kakarot                                                         |
-| ----------- | ---------------------------------------------------------- | --------------------------------------------------------------- |
-| BLOCKHASH   | Get the hash of one of the 256 most recent complete blocks | The last 10 blocks are not available, and 0 is returned instead |
-| BLOBBASEFEE | Get the current data-blob base-fee                         | Return 0 as there are no blobs on Kakarot                       |
-| BLOBHASH    | Get blob versioned hashes at index                         | Return 0 as there are no blobs on Kakarot                       |
+| Item        | Ethereum                                                   | Kakarot                                                                                                                                          |
+| ----------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BLOCKHASH   | Get the hash of one of the 256 most recent complete blocks | The last 10 blocks are not available, and 0 is returned instead                                                                                  |
+| BLOBBASEFEE | Get the current data-blob base-fee                         | Return 1 as there are no blobs on Kakarot. Corresponds to `MIN_BASE_FEE_PER_BLOB_GAS` as per [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) |
+| BLOBHASH    | Get blob versioned hashes at index                         | Return 0 as there are no blobs on Kakarot                                                                                                        |
 
 ## EVM precompiles
 
 The below precompiles differ in behavior between Ethereum and Kakarot:
 
-| Item             | Ethereum                                                                                                                                                                | Kakarot       |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| ecAdd            | Point addition (ADD) on the elliptic curve `alt_bn128`                                                                                                                  | Not supported |
-| ecMul            | Scalar multiplication (MUL) on the elliptic curve `alt_bn128`                                                                                                           | Not supported |
-| ecPairing        | Bilinear function on groups on the elliptic curve `alt_bn128`                                                                                                           | Not supported |
-| Modexp        | 	
-Arbitrary-precision exponentiation under modulo                    | Not supported |
-| Point evaluation | Verify p(z) = y given commitment that corresponds to the polynomial p(x) and a KZG proof. Also verify that the provided commitment matches the provided versioned_hash. | Not supported |
-| P256 Verification (secp256r1 - [RIP-7212](https://github.com/ethereum/RIPs/blob/master/RIPS/rip-7212.md)) | Not Supported | P256 is used in Apple’s Secure Enclave, Webauthn, Android Keychain. Enables many use cases such as cheap FaceID signature verification for smart wallets on Kakarot. |
+| Item                                                                                                      | Ethereum                                                                                                                                                                | Kakarot                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ecPairing                                                                                                 | Bilinear function on groups on the elliptic curve `alt_bn128`                                                                                                           | Not supported                                                                                                                                                        |
+| Modexp                                                                                                    | Arbitrary-precision exponentiation under modulo                                                                                                                         | Not supported                                                                                                                                                        |
+| Point evaluation                                                                                          | Verify p(z) = y given commitment that corresponds to the polynomial p(x) and a KZG proof. Also verify that the provided commitment matches the provided versioned_hash. | Not supported                                                                                                                                                        |
+| P256 Verification (secp256r1 - [RIP-7212](https://github.com/ethereum/RIPs/blob/master/RIPS/rip-7212.md)) | Not Supported                                                                                                                                                           | P256 is used in Apple’s Secure Enclave, Webauthn, Android Keychain. Enables many use cases such as cheap FaceID signature verification for smart wallets on Kakarot. |
 
 ## EVM State computation
 
