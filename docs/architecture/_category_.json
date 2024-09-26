@@ -1,8 +1,8 @@
 {
-  "label": "Architecture Deep Dive",
+  "label": "Technical Deep Dive",
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "Deep Dive into all the concepts associated with Kakarot ZK-EVM: from what is a ZK-EVM to how it works under the hood"
+    "description": "Deep Dive into all the concepts associated with Kakarot: from what is a provable EVM to how it works under the hood"
   }
 }
