@@ -11,7 +11,7 @@ The tutorial covers the entire process from setting up the Biconomy paymaster to
 
 ## Prerequisites
 
-- A wallet with some testnet tokens for Kakarot chain
+- A wallet with some testnet tokens for Kakarot Starknet Sepolia
 
 ## Step 1: Create a Biconomy Paymaster
 
