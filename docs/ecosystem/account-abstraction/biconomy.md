@@ -3,7 +3,7 @@ title: Biconomy
 sidebar_position: 3
 ---
 
-## Biconomy Integration with Kakarot 
+## Biconomy Integration with Kakarot Starknet 
 
 In this tutorial, we'll walk through the process of integrating Biconomy with Kakarot Starknet Sepolia to enable gasless transactions. 
 
