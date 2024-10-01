@@ -92,7 +92,7 @@ if (userOpReceipt.success === "true") {
 
 ## Conclusion
 
-You have now successfully integrated Biconomy with Kakarot chain and sent a gasless transaction. This setup allows your users to interact with your dApp without worrying about gas fees, improving the overall user experience.
+You have now successfully integrated Biconomy with Kakarot Starknet Sepolia and sent a gasless transaction. This setup allows your users to interact with your dApp without worrying about gas fees, improving the overall user experience.
 
 Remember to handle errors appropriately and consider implementing additional features like transaction status updates or retry mechanisms for failed transactions.
 
