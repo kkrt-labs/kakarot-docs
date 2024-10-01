@@ -7,7 +7,7 @@ sidebar_position: 3
 
 In this tutorial, we'll walk through the process of integrating Biconomy with Kakarot Starknet Sepolia to enable gasless transactions. 
 
-The tutorial covers the entire process from setting up the Biconomy paymaster to actually sending a gasless transaction on the Kakarot chain.
+The tutorial covers the entire process from setting up the Biconomy paymaster to actually sending a gasless transaction on Kakarot Starknet Sepolia.
 
 ## Prerequisites
 
