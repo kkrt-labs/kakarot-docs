@@ -18,7 +18,7 @@ The tutorial covers the entire process from setting up the Biconomy paymaster to
 1. Go to the [Biconomy Dashboard](https://dashboard.biconomy.io/).
 2. Sign up or log in to your account.
 3. Click on "Create New Paymaster."
-4. Select "Kakarot" as the network.
+4. Select "Kakarot Starknet Sepolia" as the network.
 5. Choose a name for your paymaster and click "Create."
 6. Once created, you'll see your Paymaster API Key. Save this for later use.
 
