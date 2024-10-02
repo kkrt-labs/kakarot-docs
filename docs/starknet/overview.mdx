@@ -1,0 +1,126 @@
+---
+sidebar_position: 1
+---
+
+# Overview
+
+Kakarot Labs has developed an EVM built in [Cairo](https://www.cairo-lang.org/),
+the provable language that powers [Starknet](https://starkware.co/starknet/) and
+all the StarknetOS chains (also called CairoVM chains, or Starknet appchains).
+
+Kakarot enhances and extends Starknet by making it a MultiVM environment.
+Starknet effectively becomes EVM compatible; allowing the use of both CairoVM
+and EVM for builders & users. Additionally, Kakarot
+[strives to push more innovations](https://ethcc.io/archive/Kakarot-zkEVM-beyond-ethereum-compatibility)
+to the L2 space, participating in governance initiative such as
+[Rollup Improvement Proposals](https://github.com/ethereum/RIPs) (RIPs) and
+[Rollcall](https://github.com/ethereum/pm/issues/1071#issuecomment-2221171582).
+
+## How can I use Starknet MultiVM?
+
+As a user and developer, you can interact with Starknet MultiVM thanks to
+Kakarot in the same way you would interact with Ethereum mainnet or any other
+Ethereum-compatible chain (use Metamask, Rainbow, build with Foundry or Hardhat,
+etc.). **Change the RPC URL and it "just works"**. That being said, Starknet
+MultiVM is still in alpha testnet phase 🚧 and unexpected behavior may still
+occur. Reach out to us on [discord](https://discord.gg/kakarotzkevm) to report
+bugs 🐛.
+
+Though we aim at no difference at all between Ethereum and Kakarot on Starknet —
+and we pass all applicable (more than 95%) of the
+[official Ethereum Foundation test](https://github.com/ethereum/tests) — they
+are currently some small difference recorded in the
+[differences between Kakarot and Ethereum](./differences) page in this
+documentation website.
+
+### As a user, how can I interact with Kakarot on Starknet?
+
+Head over to the [survival guide](./survival-guide) section to find useful links
+for our alpha testnet. Again, change the network to Kakarot in your wallet and
+it should "just work".
+
+#### Adding Kakarot Starknet Sepolia to Metamask
+
+You can add Kakarot Starknet Sepolia to Metamask by clicking the button below:
+
+export const AddKakarotNetwork = () => (
+  <button
+    onClick={async () => {
+      const params = [
+        {
+          chainId: "0x6B6B7274",
+          chainName: "Kakarot Sepolia",
+          nativeCurrency: {
+            name: "Ether",
+            symbol: "ETH",
+            decimals: 18,
+          },
+          rpcUrls: ["https://sepolia-rpc.kakarot.org"],
+          blockExplorerUrls: [
+            "https://sepolia.kakarotscan.org/",
+            "https://sepolia-blockscout.kakarot.org",
+          ],
+        },
+      ];
+      try {
+        // Note: if chain is already added, returns `null` and won't error out
+        await window.ethereum.request({
+          method: "wallet_addEthereumChain",
+          params,
+        });
+      } catch (error) {
+        // TODO: Add User feedback (e.g. Toast message) in case of error
+        console.error(error);
+      }
+    }}
+    className="button button--primary button--md padding-horiz--md padding-vert--md margin--md margin-bottom--lg"
+  >
+    🦊 Add Kakarot Sepolia to Metamask 🦊
+  </button>
+);
+
+<AddKakarotNetwork />
+
+Or by add a new network manually to Metamask: open the Metamask extension. Click
+"Add Network". Choose "Add a Network Manually". Then fill the fields:
+
+| Category       | Value                            |
+| -------------- | -------------------------------- |
+| Network Name   | Kakarot Starknet Sepolia         |
+| RPC URL        | https://sepolia-rpc.kakarot.org  |
+| Chain Id       | 5424235787602241                 |
+| Symbol         | ETH                              |
+| Block Explorer | https://sepolia.kakarotscan.org/ |
+
+### As a developer, how can I build on Kakarot ZK-EVM?
+
+For developers as well, change the RPC URL, and it should "just work".
+
+In case you encounter some unknown bug or want to discuss new features, you can:
+
+- Join our discord and get support: https://discord.gg/kakarotzkevm
+- Ask us anything on Twitter: https://twitter.com/KakarotZkEvm
+
+## What differentiates Kakarot on Starknet?
+
+1. Agile and lightweight: Kakarot's core EVM is built on Cairo, a provable VM,
+   enabling cryptography efforts to be separated from engineering. As a result,
+   Kakarot's code is lean, highly auditable and easily extensible. A strong
+   example is the
+   [EOF set of Ethereum Improvement Proposals probably coming in Pectra](https://x.com/_weidai/status/1816019532890444216),
+   which are easy to implement for Kakarot and extremely hard for circuit-based
+   ZK-EVMs.
+
+2. Interoperable and modular: Kakarot enables a MultiVM environment on Starknet
+   chains. Solidity contracts can call into Cairo programs, and vice-versa.
+   Starknet apps can gain exposure to EVM ecosystems, and EVM apps can finally
+   land on Starknet for minimal costs.
+
+3. Highly-performant and future-proof: Building on Kakarot means benefiting from
+   all the future upgrades of the Cairo stack. For instance, with the release of
+   [Stwo](https://github.com/starkware-libs/stwo), an extremely fast prover by
+   Starkware expected in early 2025, Kakarot apps will directly experience
+   100-1,000x improvements in ZK proof generation performance.
+
+For a deep-dive into the Kakarot design, check out
+[the architecture overview](./architecture/understanding-zkevm).

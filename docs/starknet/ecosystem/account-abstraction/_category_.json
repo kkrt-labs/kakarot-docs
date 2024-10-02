@@ -1,0 +1,8 @@
+{
+  "label": "Account Abstraction",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Welcome to the Account Abstraction page! Here, you'll find all the information related to account abstraction available on Kakarot Starknet Sepolia testnet."
+  }
+}
