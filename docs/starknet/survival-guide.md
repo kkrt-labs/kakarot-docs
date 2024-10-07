@@ -4,8 +4,10 @@ sidebar_position: 2
 
 # Kakarot Starknet Sepolia - Quick Start
 
-Welcome to the Kakarot Testnet Survival Guide! This document aims to provide all
-the necessary links and information to navigate the Testnet well.
+Welcome to the Kakarot Starknet Sepolia Testnet Survival Guide! Kakarot has
+officially entered its last Testnet phase: an EVM environment on Starknet
+Sepolia L2. This document aims to provide all the necessary links and
+information to navigate the Testnet well.
 
 ## Useful Links
 
