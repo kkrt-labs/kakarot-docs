@@ -184,3 +184,10 @@ We believe that in focusing only on engineering, our approach is scalable and
 sustainable.
 
 <!-- For information unrelated to documentation effort, link to external URLs to decrease the area to maintain: docs should contain doc-related content, and for other content (e.g. how did Kakarot start, what is the roadmap, etc.), use other media -->
+
+## Starknet MultiVM appchains, powered by Kakarot
+
+KKRT Labs will be working closely with trusted partners such as Starkware,
+Karnot and other appchain providers to deliver EVM-compatible Starknet
+appchains. These appchains will obtain MultiVM capabilities, allowing them to
+tap into bigger developer and user communities.

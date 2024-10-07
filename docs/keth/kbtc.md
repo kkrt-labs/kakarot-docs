@@ -1,4 +1,4 @@
-# KBTC - Bring ZK to Bitcoin
+# KBTC - Bring STARKs and EVM to Bitcoin
 
 Kakarot can power Ethereum-compatible rollups on top of Bitcoin, we call this
 product KBTC: the first ever EVM proving engine, verifiable on Bitcoin.
