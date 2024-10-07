@@ -12,7 +12,8 @@ the necessary links and information to navigate the Testnet well.
 ### Development Resources
 
 - [Faucet 🚰](https://sepolia-faucet.kakarot.org): Claim testnet ETH daily.
-  Whitelist required.
+  Requires a minimal mainnet Ethereum balance to prevent spam. Alternatively,
+  use our [discord](https://discord.gg/kakarotzkevm) faucet bot!
 
 ### Testnet Tools
 
