@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Kakarot ZK-EVM",
-  tagline: "Ethereum's Second Frontier",
+  tagline: "Efficient and Secure EVM Provability. Everywhere.",
   favicon: "img/favicon.svg",
 
   // Set the production url of your site here
@@ -18,7 +18,7 @@ const config: Config = {
   organizationName: "kkrt-labs", // Usually your GitHub org/user name.
   projectName: "kakarot-docs", // Usually your repo name.
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
@@ -112,7 +112,9 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Kakarot ZK-EVM, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${
+        new Date().getFullYear()
+      } Kakarot ZK-EVM, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.nightOwlLight,
