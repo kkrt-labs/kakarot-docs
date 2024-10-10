@@ -44,7 +44,7 @@ const config = {
   privateKey: "your-private-key",
   biconomyPaymasterApiKey: "your-paymaster-api-key",
   bundlerUrl:
-    "https://bundler.biconomy.io/api/v2/5424235787602241/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44",
+    "https://bundler.biconomy.io/api/v2/920637907288165/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44",
 };
 ```
 

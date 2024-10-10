@@ -16,5 +16,5 @@ learn how to index blockchain data and integrate it into your application.
 Add the following environment variable to your `.env.local` file:
 
 ```bash
-PONDER_RPC_URL_5424235787602241=https://sepolia-rpc.kakarot.org/
+PONDER_RPC_URL_920637907288165=https://sepolia-rpc.kakarot.org/
 ```
