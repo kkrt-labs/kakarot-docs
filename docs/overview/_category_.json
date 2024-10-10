@@ -1,0 +1,8 @@
+{
+  "label": "Technical Overview",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "A gentle introduction to Kakarot's vision and a technical deep dive."
+  }
+}
