@@ -50,7 +50,7 @@ information to navigate the Testnet well.
 
 ## Contract Address Book
 
-- WETH: 0x761612F0C8bdf8cF10e6F10045E2Ca7cbffBa8A3
+- WETH: 0xe7f1725e7734ce288f8367e1bb143e90bb3f0512
 - [Arachnid deterministic deployment proxy](https://github.com/Arachnid/deterministic-deployment-proxy):
   0x4e59b44847b379578588920ca78fbf26c0b4956c
 - [Multicall3](https://github.com/mds1/multicall):
@@ -58,10 +58,10 @@ information to navigate the Testnet well.
 - [CreateX](https://github.com/pcaversaccio/createx):
   0xba5Ed099633D3B313e4D5F7bdc1305d3c28ba5Ed
 
-- USDc:
-  [0x1B4C0bc8703D3af59322849bE01559fdb920c904](https://sepolia.kakarotscan.org/token/0x1B4C0bc8703D3af59322849bE01559fdb920c904)
-- USDt:
-  [0x2BF1004D9e80ca087BD1e089d75bc8c471995aC1](https://sepolia.kakarotscan.org/token/0x2BF1004D9e80ca087BD1e089d75bc8c471995aC1)
+- Kakarot Coinbase: 0x5fbdb2315678afecb367f032d93f642f64180aa3
+
+- USDc: DualVM token WIP 🚧
+- USDt: DualVM token WIP 🚧
 
 🚧 The following contract addresses are coming soon.
 
