@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --ifm-color-primary: #003d29;
@@ -15,15 +15,15 @@
   --ifm-color-primary-light: #00432d;
   --ifm-color-primary-lighter: #00462f;
   --ifm-color-primary-lightest: #004f35;
-  --ifm-background-color: #fffadb;
+  --ifm-background-color: #fffffa;
   --ifm-navbar-background-color: var(--ifm-background-color);
-  --ifm-font-family-base: "Inter Tight", sans-serif;
-  --ifm-font-family-monospace: "Inter Tight", monospace;
+  --ifm-font-family-base: 'Inter Tight', sans-serif;
+  --ifm-font-family-monospace: 'Inter Tight', monospace;
   --ifm-code-font-size: 95%;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --ifm-color-primary: #fffadb;
   --ifm-color-primary-dark: #fff3ac;
   --ifm-color-primary-darker: #fff094;
@@ -32,8 +32,8 @@
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
   --ifm-background-color: #003d29;
-  --ifm-font-family-base: "Inter Tight", sans-serif;
-  --ifm-font-family-monospace: "Inter Tight", monospace;
+  --ifm-font-family-base: 'Inter Tight', sans-serif;
+  --ifm-font-family-monospace: 'Inter Tight', monospace;
   --ifm-code-font-size: 95%;
 }
 
@@ -56,8 +56,8 @@ body {
 /* Override the font for code blocks */
 code,
 pre {
-  font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
-    Courier New;
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
 }
 
 /* Additional styling for pre to ensure it looks good */
