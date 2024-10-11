@@ -87,7 +87,7 @@ in the
 The Pyth Network smart contract is available at the following address:
 
 - Kakarot Starknet Sepolia Testnet:
-  [`0xe9d69CdD6Fe41e7B621B4A688C5D1a68cB5c8ADc`](https://blockscout-kkrt-sepolia.karnot.xyz/address/0xe9d69CdD6Fe41e7B621B4A688C5D1a68cB5c8ADc/)
+  [`0xe9d69CdD6Fe41e7B621B4A688C5D1a68cB5c8ADc`](https://sepolia.kakarotscan.org/address/0xe9d69CdD6Fe41e7B621B4A688C5D1a68cB5c8ADc)
 
 Additionally, click to access the
 [Pyth price-feed IDs](https://pyth.network/developers/price-feed-ids).
