@@ -15,7 +15,7 @@ You can declare a alias in `foundry.toml`:
 src = "src"
 out = "out"
 libs = ["lib"]
-evm_version = 'shanghai' # Kakarot Sepolia supports `PUSH0`
+evm_version = 'cancun' # Kakarot supports `PUSH0`, `TLOAD` / `TSTORE`...
 
 [rpc_endpoints]
 kakarot_starknet_sepolia = "https://sepolia-rpc.kakarot.org"
