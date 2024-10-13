@@ -13,7 +13,7 @@ We are currently deployed on the following addresses:
 
 | Network                  | PragmaCaller Solidity Contract                                                                                                   | Native Starknet Address (ignore if you're an EVM developer)       |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Kakarot Starknet Sepolia | [0x7491cA3699701a187C1a17308338Ad0bA258B082](https://sepolia.kakarotscan.org/address/0x7491cA3699701a187C1a17308338Ad0bA258B082) | 0x3a99b4b9f711002f1976b3973f4b2031fe6056518615ff0f4e6dd829f972764 |
+| Kakarot Starknet Sepolia | [0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc](https://sepolia.kakarotscan.org/address/0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc) | 0x36031daa264c24520b11d93af622c848b2499b66b41d611bac95e13cfca131a |
 | Kakarot Mainnet          | **⏳ Soon**                                                                                                                      | **⏳ Soon**                                                       |
 
 ## Consuming our Data Feeds
@@ -33,13 +33,16 @@ The list of supported assets is:
 
 | Ticker     | Pair ID                  | Decimals | Kakarot Starknet Sepolia                                                                                                         | Kakarot Mainnet |
 | ---------- | ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| BTC/USD    | 18669995996566340        | 8        | [0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc](https://sepolia.kakarotscan.org/address/0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc) | **⏳ Soon**     |
-| ETH/USD    | 19514442401534788        | 8        | [0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14](https://sepolia.kakarotscan.org/address/0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14) | **⏳ Soon**     |
-| WBTC/USD   | 6287680677296296772      | 8        | [0x330ec0B08B74a4F34Fd76B0917A55169885624Be](https://sepolia.kakarotscan.org/address/0x330ec0B08B74a4F34Fd76B0917A55169885624Be) | **⏳ Soon**     |
-| USDC/USD   | 6148332971638477636      | 6        | [0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811](https://sepolia.kakarotscan.org/address/0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811) | **⏳ Soon**     |
-| USDT/USD   | 6148333044652921668      | 6        | [0x4604A5b10818638F751829A580362eD5a42b9E5E](https://sepolia.kakarotscan.org/address/0x4604A5b10818638F751829A580362eD5a42b9E5E) | **⏳ Soon**     |
-| WSTETH/USD | 412383036120118613857092 | 8        | [0xa3C78F0fd24523d1D5A70e47086343A445976911](https://sepolia.kakarotscan.org/address/0xa3C78F0fd24523d1D5A70e47086343A445976911) | **⏳ Soon**     |
-| STRK/USD   | 6004514686061859652      | 8        | [0x52880cAe955C88546134e7394B4305c2fA79faB8](https://sepolia.kakarotscan.org/address/0x52880cAe955C88546134e7394B4305c2fA79faB8) | **⏳ Soon**     |
+| BTC/USD    | 18669995996566340        | 8        | [0x330ec0B08B74a4F34Fd76B0917A55169885624Be](https://sepolia.kakarotscan.org/address/0x330ec0B08B74a4F34Fd76B0917A55169885624Be) | **⏳ Soon**     |
+| ETH/USD    | 19514442401534788        | 8        | [0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811](https://sepolia.kakarotscan.org/address/0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811) | **⏳ Soon**     |
+| WBTC/USD   | 6287680677296296772      | 8        | [0x4604A5b10818638F751829A580362eD5a42b9E5E](https://sepolia.kakarotscan.org/address/0x4604A5b10818638F751829A580362eD5a42b9E5E) | **⏳ Soon**     |
+| USDC/USD   | 6148332971638477636      | 6        | [0xa3C78F0fd24523d1D5A70e47086343A445976911](https://sepolia.kakarotscan.org/address/0xa3C78F0fd24523d1D5A70e47086343A445976911) | **⏳ Soon**     |
+| USDT/USD   | 6148333044652921668      | 6        | [0x52880cAe955C88546134e7394B4305c2fA79faB8](https://sepolia.kakarotscan.org/address/0x52880cAe955C88546134e7394B4305c2fA79faB8) | **⏳ Soon**     |
+| WSTETH/USD | 412383036120118613857092 | 8        | [0x5Ad588FDF6a8851c4098fC3aec535f0A66316C0F](https://sepolia.kakarotscan.org/address/0x5Ad588FDF6a8851c4098fC3aec535f0A66316C0F) | **⏳ Soon**     |
+| STRK/USD   | 6004514686061859652      | 8        | [0x7225f3743668B2751075cd53D25B449ca9967718](https://sepolia.kakarotscan.org/address/0x7225f3743668B2751075cd53D25B449ca9967718) | **⏳ Soon**     |
+| UNI/USD    | 24011449254105924        | 8        | [0x858FA2FacF63A3e529cAb4F5a02ceaFb590db2c1](https://sepolia.kakarotscan.org/address/0x858FA2FacF63A3e529cAb4F5a02ceaFb590db2c1) | **⏳ Soon**     |
+| EKUBO/USD  | 1278253658919688033092   | 8        | [0xa07CC3ff0557fD0F01FFb004469103353D6126F4](https://sepolia.kakarotscan.org/address/0xa07CC3ff0557fD0F01FFb004469103353D6126F4) | **⏳ Soon**     |
+| LORDS/USD  | 1407668255603079598916   | 8        | [0xac0e304dA34912C9eD1d29a212feC74B36Eea4d6](https://sepolia.kakarotscan.org/address/0xac0e304dA34912C9eD1d29a212feC74B36Eea4d6) | **⏳ Soon**     |
 
 #### 1. Define the PragmaAggregator interface
 
@@ -63,7 +66,7 @@ contract PragmaDataConsumer {
 
     constructor() {
         dataFeed = IPragmaAggregatorV3(
-            0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc // BTC/USD Pragma Interface
+            0x330ec0B08B74a4F34Fd76B0917A55169885624Be // BTC/USD Pragma Interface
         );
     }
 
@@ -152,7 +155,7 @@ contract CallerExample {
 ```
 
 An example has been deployed
-[here](https://sepolia.kakarotscan.org/address/0x9acb5dbE6B9E3569f4Ab8b4bf8E09F7efC330A26).
+[here](https://sepolia.kakarotscan.org/address/0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14).
 
 ### Learn more
 
