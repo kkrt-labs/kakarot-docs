@@ -3,7 +3,7 @@ title: The concept of ZK-EVM
 sidebar_position: 1
 ---
 
-To grasp the concept of ZK-EVM, let's start by understanding what the Ethereum
+To understand the concept of ZK-EVM, let's start by understanding what the Ethereum
 Virtual Machine (EVM) is.
 
 ## The Ethereum Virtual Machine (EVM)
