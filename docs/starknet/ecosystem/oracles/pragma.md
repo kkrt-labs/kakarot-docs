@@ -13,8 +13,8 @@ We are currently deployed on the following addresses:
 
 | Network                  | PragmaCaller Solidity Contract                                                                                                   | Native Starknet Address (ignore if you're an EVM developer)       |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Kakarot Starknet Sepolia | [0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc](https://sepolia.kakarotscan.org/address/0x5a3d161e5c63511F97F51fbF366B8238Cd0bBeAc) | 0x36031daa264c24520b11d93af622c848b2499b66b41d611bac95e13cfca131a |
-| Kakarot Mainnet          | **⏳ Soon**                                                                                                                      | **⏳ Soon**                                                       |
+| Kakarot Starknet Sepolia | [0x874C3C6299E2166DE37838a8F15f52952b25f186](https://sepolia.kakarotscan.org/address/0x874C3C6299E2166DE37838a8F15f52952b25f186) | 0x36031daa264c24520b11d93af622c848b2499b66b41d611bac95e13cfca131a |
+| Kakarot Mainnet          | **⏳ Soon**                                                                                                                       | **⏳ Soon**                                                        |
 
 ## Consuming our Data Feeds
 
@@ -33,16 +33,16 @@ The list of supported assets is:
 
 | Ticker     | Pair ID                  | Decimals | Kakarot Starknet Sepolia                                                                                                         | Kakarot Mainnet |
 | ---------- | ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| BTC/USD    | 18669995996566340        | 8        | [0x330ec0B08B74a4F34Fd76B0917A55169885624Be](https://sepolia.kakarotscan.org/address/0x330ec0B08B74a4F34Fd76B0917A55169885624Be) | **⏳ Soon**     |
-| ETH/USD    | 19514442401534788        | 8        | [0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811](https://sepolia.kakarotscan.org/address/0xcD025F607AdB9542B77C69A29B7b9Aa32Bf06811) | **⏳ Soon**     |
-| WBTC/USD   | 6287680677296296772      | 8        | [0x4604A5b10818638F751829A580362eD5a42b9E5E](https://sepolia.kakarotscan.org/address/0x4604A5b10818638F751829A580362eD5a42b9E5E) | **⏳ Soon**     |
-| USDC/USD   | 6148332971638477636      | 6        | [0xa3C78F0fd24523d1D5A70e47086343A445976911](https://sepolia.kakarotscan.org/address/0xa3C78F0fd24523d1D5A70e47086343A445976911) | **⏳ Soon**     |
-| USDT/USD   | 6148333044652921668      | 6        | [0x52880cAe955C88546134e7394B4305c2fA79faB8](https://sepolia.kakarotscan.org/address/0x52880cAe955C88546134e7394B4305c2fA79faB8) | **⏳ Soon**     |
-| WSTETH/USD | 412383036120118613857092 | 8        | [0x5Ad588FDF6a8851c4098fC3aec535f0A66316C0F](https://sepolia.kakarotscan.org/address/0x5Ad588FDF6a8851c4098fC3aec535f0A66316C0F) | **⏳ Soon**     |
-| STRK/USD   | 6004514686061859652      | 8        | [0x7225f3743668B2751075cd53D25B449ca9967718](https://sepolia.kakarotscan.org/address/0x7225f3743668B2751075cd53D25B449ca9967718) | **⏳ Soon**     |
-| UNI/USD    | 24011449254105924        | 8        | [0x858FA2FacF63A3e529cAb4F5a02ceaFb590db2c1](https://sepolia.kakarotscan.org/address/0x858FA2FacF63A3e529cAb4F5a02ceaFb590db2c1) | **⏳ Soon**     |
-| EKUBO/USD  | 1278253658919688033092   | 8        | [0xa07CC3ff0557fD0F01FFb004469103353D6126F4](https://sepolia.kakarotscan.org/address/0xa07CC3ff0557fD0F01FFb004469103353D6126F4) | **⏳ Soon**     |
-| LORDS/USD  | 1407668255603079598916   | 8        | [0xac0e304dA34912C9eD1d29a212feC74B36Eea4d6](https://sepolia.kakarotscan.org/address/0xac0e304dA34912C9eD1d29a212feC74B36Eea4d6) | **⏳ Soon**     |
+| BTC/USD    | 18669995996566340        | 8        | [0x9999bcA6284AD4A0503E93ae418566786d52C0f8](https://sepolia.kakarotscan.org/address/0x9999bcA6284AD4A0503E93ae418566786d52C0f8) | **⏳ Soon**      |
+| ETH/USD    | 19514442401534788        | 8        | [0xbDF3294C51ADD204ef06F1d2C2d11d4aa94725f8](https://sepolia.kakarotscan.org/address/0xbDF3294C51ADD204ef06F1d2C2d11d4aa94725f8) | **⏳ Soon**      |
+| WBTC/USD   | 6287680677296296772      | 8        | [0x8Ca18fAB3D3e6e12236599a5604ef0D918f468D7](https://sepolia.kakarotscan.org/address/0x8Ca18fAB3D3e6e12236599a5604ef0D918f468D7) | **⏳ Soon**      |
+| USDC/USD   | 6148332971638477636      | 6        | [0x3DE32d3Be34315b1De89C2108bCebf2771B1aC61](https://sepolia.kakarotscan.org/address/0x3DE32d3Be34315b1De89C2108bCebf2771B1aC61) | **⏳ Soon**      |
+| USDT/USD   | 6148333044652921668      | 6        | [0x98629B2B14E21248e99906A04B923eA5ae8B3Cc5](https://sepolia.kakarotscan.org/address/0x98629B2B14E21248e99906A04B923eA5ae8B3Cc5) | **⏳ Soon**      |
+| WSTETH/USD | 412383036120118613857092 | 8        | [0x5E412799a9B3ABa0f098768bDbbC70AdA94195e5](https://sepolia.kakarotscan.org/address/0x5E412799a9B3ABa0f098768bDbbC70AdA94195e5) | **⏳ Soon**      |
+| STRK/USD   | 6004514686061859652      | 8        | [0x3634ae539bFA68c055C8A714438542766f14D192](https://sepolia.kakarotscan.org/address/0x3634ae539bFA68c055C8A714438542766f14D192) | **⏳ Soon**      |
+| UNI/USD    | 24011449254105924        | 8        | [0x31C73089f62c6Fc41ea59feA34E927DDB9Ee93fb](https://sepolia.kakarotscan.org/address/0x31C73089f62c6Fc41ea59feA34E927DDB9Ee93fb) | **⏳ Soon**      |
+| EKUBO/USD  | 1278253658919688033092   | 8        | [0x9fC4779897AEDe45B8Bf74669EDCD4038163565b](https://sepolia.kakarotscan.org/address/0x9fC4779897AEDe45B8Bf74669EDCD4038163565b) | **⏳ Soon**      |
+| LORDS/USD  | 1407668255603079598916   | 8        | [0x27ae6f192E8d97Cd37922FFB83789e000A5A18Ce](https://sepolia.kakarotscan.org/address/0x27ae6f192E8d97Cd37922FFB83789e000A5A18Ce) | **⏳ Soon**      |
 
 #### 1. Define the PragmaAggregator interface
 
@@ -66,7 +66,7 @@ contract PragmaDataConsumer {
 
     constructor() {
         dataFeed = IPragmaAggregatorV3(
-            0x330ec0B08B74a4F34Fd76B0917A55169885624Be // BTC/USD Pragma Interface
+            0x9999bcA6284AD4A0503E93ae418566786d52C0f8 // BTC/USD Chainlink Interface contract
         );
     }
 
@@ -87,7 +87,7 @@ contract PragmaDataConsumer {
 
 The Pragma Oracle cairo contract has been integrated by Kakarot - thus it is
 possible to call it directly in your Solidity contracts using the
-[PragmaCaller](https://github.com/kkrt-labs/kakarot/blob/main/solidity_contracts%2Fsrc%2FCairoPrecompiles%2FPragmaCaller.sol)
+[PragmaCaller](https://github.com/kkrt-labs/kakarot/blob/main/solidity_contracts/src/CairoPrecompiles/PragmaCaller.sol)
 interface!
 
 The complete list of
@@ -98,13 +98,18 @@ can be found in our documentation: just grab the pair id and you're good to go!
 
 ```typescript
 interface IPragmaCaller {
+    enum AggregationMode {
+        Median,
+        Mean
+    }
     enum DataType {
         SpotEntry,
         FuturesEntry,
         GenericEntry
     }
 
-    struct DataRequest {
+    struct PragmaPricesRequest {
+        AggregationMode aggregationMode;
         DataType dataType;
         uint256 pairId;
         uint256 expirationTimestamp;
@@ -116,13 +121,15 @@ interface IPragmaCaller {
         uint256 last_updated_timestamp;
         uint256 num_sources_aggregated;
         uint256 maybe_expiration_timestamp;
-    }
+    }}
 
-    function getDataMedianSpot(DataRequest memory request) external view returns (PragmaPricesResponse memory);
+    function getData(
+        PragmaPricesRequest memory request
+    ) external view returns (PragmaPricesResponse memory);
 }
 ```
 
-#### 2. Retrieve the BTC/USD Spot Median Price
+#### 2.A Retrieve the BTC/USD Spot Median Price
 
 ```typescript
 interface IPragmaCaller {
@@ -138,23 +145,116 @@ contract CallerExample {
         pragmaCaller = IPragmaCaller(pragmaCallerAddress);
     }
 
-    function getDataMedianSpot(uint256 pairId) public view returns (IPragmaCaller.PragmaPricesResponse memory) {
-        IPragmaCaller.DataRequest memory request = IPragmaCaller.DataRequest(
-            IPragmaCaller.DataType.SpotEntry,
-            pairId,
-            0
-        );
-        return pragmaCaller.getDataMedianSpot(request);
+    function getDataMedianSpot(
+        uint256 pairId
+    ) public view returns (IPragmaCaller.PragmaPricesResponse memory) {
+        IPragmaCaller.PragmaPricesRequest memory request = IPragmaCaller
+            .PragmaPricesRequest(
+                IPragmaCaller.AggregationMode.Median,
+                IPragmaCaller.DataType.SpotEntry,
+                pairId,
+                0
+            );
+        return pragmaCaller.getData(request);
     }
 
-    function getBtcMedianPrice() public view returns (uint256) {
-        IPragmaCaller.PragmaPricesResponse memory response = getDataMedianSpot(BTC_USD_FEED);
-        return response.price;
+    function getBtcSpotMedianPrice()
+        public
+        view
+        returns (IPragmaCaller.PragmaPricesResponse memory)
+    {
+        return getDataMedianSpot(BTC_USD_FEED);
     }
 }
 ```
 
-An example has been deployed
+#### 2.B Compute the volatility of BTC/USD over the last week
+
+The `PragmaCaller` also allow you to call Pragma's
+[Computational Feeds](https://docs.pragma.build/v1/Resources/computational-feeds/what-are-computational-feeds).
+
+For example, here is how you could compute the volatility of BTC/USD:
+
+```typescript
+interface IPragmaCaller {
+    struct PragmaCalculateVolatilityRequest {
+        DataType dataType;
+        uint256 pairId;
+        uint256 expirationTimestamp;
+        uint64 startTimestamp;
+        uint64 endTimestamp;
+        uint64 numSamples;
+        AggregationMode aggregationMode;
+    }
+
+    struct PragmaSummaryStatsResponse {
+        uint256 price;
+        uint256 decimals;
+    }
+
+     function calculateVolatility(
+        PragmaCalculateVolatilityRequest memory request
+    ) external view returns (PragmaSummaryStatsResponse memory);
+}
+
+contract CallerExample {
+    IPragmaCaller private pragmaCaller;
+    // ascii conversion of "BTC/USD";
+    uint256 constant BTC_USD_FEED = 18669995996566340;
+    uint64 constant SECONDS_IN_ONE_WEEK = 604800;
+    uint64 constant CALCULATE_VOL_NUM_SAMPLES = 200;
+
+    constructor(address pragmaCallerAddress) {
+        pragmaCaller = IPragmaCaller(pragmaCallerAddress);
+    }
+
+    function getVolatilyOverLastWeek(
+        uint256 pairId
+    ) public view returns (IPragmaCaller.PragmaSummaryStatsResponse memory) {
+        uint64 blockTimestamp = uint64(block.timestamp);
+
+        IPragmaCaller.PragmaCalculateVolatilityRequest
+            memory request = IPragmaCaller.PragmaCalculateVolatilityRequest(
+                IPragmaCaller.DataType.SpotEntry,
+                pairId,
+                0,
+                blockTimestamp - SECONDS_IN_ONE_WEEK,
+                blockTimestamp,
+                CALCULATE_VOL_NUM_SAMPLES,
+                IPragmaCaller.AggregationMode.Median
+            );
+        return pragmaCaller.calculateVolatility(request);
+    }
+
+    function getBtcVolatilyOverLastWeek()
+        public
+        view
+        returns (IPragmaCaller.PragmaSummaryStatsResponse memory)
+    {
+        uint64 blockTimestamp = uint64(block.timestamp);
+
+        IPragmaCaller.PragmaCalculateVolatilityRequest
+            memory request = IPragmaCaller.PragmaCalculateVolatilityRequest(
+                IPragmaCaller.DataType.SpotEntry,
+                BTC_USD_FEED,
+                0,
+                blockTimestamp - SECONDS_IN_ONE_WEEK,
+                blockTimestamp,
+                CALCULATE_VOL_NUM_SAMPLES,
+                IPragmaCaller.AggregationMode.Median
+            );
+        return pragmaCaller.calculateVolatility(request);
+    }
+}
+```
+
+Similarly, you can also use the functions:
+* `calculateMean`,
+* `calculateTwap`.
+
+You can find the full example [here](https://github.com/astraly-labs/pragma-oracle/blob/main/kakarot-evm-interface/src/CallerExample.sol).
+
+An example with has been deployed
 [here](https://sepolia.kakarotscan.org/address/0x3899D87a02eFaB864C9306DCd2EDe06B90f28B14).
 
 ### Learn more
