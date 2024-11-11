@@ -3,7 +3,7 @@ title: Foundry
 sidebar_position: 3
 ---
 
-> [Foundry](https://github.com/foundry-rs/foundry) is a development environment for Ethereum which is wriiten in Rust
+> [Foundry](https://github.com/foundry-rs/foundry) is a development environment for Ethereum which is written in Rust
 
 You can clone [this](https://github.com/ChiHaoLu/kakarot-foundry) template repo to begin your Kakarot journey w/ Foundry.
 
