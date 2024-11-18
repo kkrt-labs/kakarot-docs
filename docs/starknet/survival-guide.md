@@ -21,7 +21,7 @@ information to navigate the Testnet well.
 
 - Explorers:
   - Routescan: https://sepolia.kakarotscan.org/
-  - Blockscout: https://sepolia-blockscout.kakarot.org
+  - Blockscout: https://sepolia-explorer.kakarot.org
 - Public RPC: https://sepolia-rpc.kakarot.org
 
 ### Community Channels
