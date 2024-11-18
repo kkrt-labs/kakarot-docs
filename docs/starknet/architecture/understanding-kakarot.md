@@ -188,6 +188,6 @@ sustainable.
 ## Starknet MultiVM appchains, powered by Kakarot
 
 KKRT Labs will be working closely with trusted partners such as Starkware,
-Kakarot and other appchain providers to deliver EVM-compatible Starknet
+Karnot and other appchain providers to deliver EVM-compatible Starknet
 appchains. These appchains will obtain MultiVM capabilities, allowing them to
 tap into bigger developer and user communities.
