@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Kakarot ZK-EVM",
-  tagline: "Efficient and Secure EVM Provability. Everywhere.",
+  title: "Kakarot",
+  tagline: "Prove the Ethereum Protocol, in real-time.",
   favicon: "img/favicon.svg",
 
   // Set the production url of your site here
@@ -80,10 +80,6 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Testnet",
-              to: "/survival-guide",
-            },
-            {
               label: "Introduction",
               to: "/",
             },
@@ -98,7 +94,7 @@ const config: Config = {
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/kakarotzkevm",
+              href: "https://x.com/kakarotzkevm",
             },
           ],
         },
@@ -114,7 +110,7 @@ const config: Config = {
       ],
       copyright: `Copyright © ${
         new Date().getFullYear()
-      } Kakarot ZK-EVM, Inc. Built with Docusaurus.`,
+      } KKRT Labs.`,
     },
     prism: {
       theme: prismThemes.nightOwlLight,
