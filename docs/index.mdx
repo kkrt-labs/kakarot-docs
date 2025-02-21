@@ -1,31 +1,24 @@
 ---
-title: A gentle introduction to Kakarot, the provable EVM
+title: Introduction to Kakarot, the Ethereum proving engine
 sidebar_position: 1
 ---
 
-## Welcome to our documentation v2
+## Welcome to our documentation v3
 
 Welcome to our new documentation! We've updated it to reflect our roadmap and
-vision for the coming years: accelerating the adoption of ZK in
-Ethereum-equivalent blockchain infrastructure. Kakarot is a verifiable EVM, and
-KKRT Labs is bringing it to [Starknet L2](./starknet/overview) as well as to all
-[EVM chains](./keth) - L1 and rollups alike.
+vision for the coming years: proving the Ethereum Protocol in real-time. Kakarot
+is an EVM proof generation engine, and we are bringing it to all
+Ethereum-equivalent chains: L1, rollups and Bitcoin sidechains.
 
 ## Introduction
 
-KKRT Labs is building Kakarot, the most lightweight and efficient EVM proving
-engine, in order to power the “STARKification” of all EVM execution. Kakarot is
-built on Cairo, Starkware’s STARK-friendly ZK-VM.
+KKRT Labs is building Kakarot, a state-of-the-art lightweight and efficient
+ZK-EVM proving engine. Proving the Ethereum execution layer and consensus layer
+unlocks the ability to
+["SNARKify" Ethereum](https://www.youtube.com/watch?v=lRqnFrqpq4k), scaling it
+to a capacity comparable to Visa. Kakarot is built on Cairo, Starkware’s
+STARK-friendly ZK-VM.
 
-KKRT Labs packages this provable EVM into four different applications.
-
-| Component                                   | Description                                                                                          |
-| ------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **[Starknet MultiVM](./starknet/overview)** | EVM execution on Starknet L2, making Starknet EVM compatible and thus a MultiVM ZK-rollup.           |
-| **[K Stack](./keth/kstack)**                | An EVM-compatible ZK-appchain modular stack composable with Starknet Appchains or Reth-based rollups |
-| **[Keth](./keth)**                          | A chain-agnostic EVM proving service. Prove billions of EVM blocks from L1 and L2 networks.          |
-| **[KBTC](./keth/kbtc)**                     | The first-ever EVM proving engine verifiable on Bitcoin, facilitating scaling for Bitcoin L1.        |
-
-> Diagram - Kakarot proving engine has four applications
-
-![Kakarot proving engine has four applications](../static/diagrams/kakarot_applications.png)
+We strongly believe that networks will benefit from transitioning to ZK, both in
+security and performance. This starts by generating ZK-proofs of block
+execution.

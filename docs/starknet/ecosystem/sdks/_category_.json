@@ -1,9 +1,0 @@
-{
-    "label": "SDKs and Libraries",
-    "position": 3,
-    "link": {
-      "type": "generated-index",
-      "description": "Welcome to the SDKs page! Find useful information about SDKs and Libraries (e.g. Foundry, Viem, Hardhat), such as recommended configuration or known issues."
-    }
-  }
-  

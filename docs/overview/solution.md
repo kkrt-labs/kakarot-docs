@@ -8,36 +8,36 @@ Kakarot is a provable EVM built with Cairo, Starkware’s STARK-friendly ZK-VM.
 
 ## Why ZK-VMs?
 
-There are generally two ways to build a ZK-application or a piece of
-ZK-infrastructure: either by using a ZK-VM or through writing specialized
-ZK-circuits.
+There are generally two ways to build a ZK-application or ZK-infrastructure:
+either by using a ZK-VM or by writing specialized ZK-circuits.
 
 In simple terms, ZK-VMs are virtual machines capable of generating ZK proofs
-that verify the correctness of their operations. In blockchain context, VMs are
-the environments on which smart contracts live and operate. On the other hand,
-ZK-circuits are mathematical representations used to model a specific process.
-These circuits break down computations into a series of logical operations, much
-like how a circuit works in electronics.
+that verify the correctness of their execution. On the other hand, ZK-circuits
+are mathematical representations used to model a specific process. These
+circuits break down computations into a series of logical operations, much like
+how a circuit works in electronics.
 
 Back in 2022/2023, all ZK-EVMs including Scroll, Linea, and ZKSync were built on
 specialized ZK-circuits. As ZK-circuits were created and optimized for one
 specific use case, they were considered faster. However, ZK-circuits are
 generally more complex to develop — they are harder to audit, harder to
-maintain, and also surprisingly no longer more efficient than the modern ZK-VMs.
+maintain, and also surprisingly no longer always more efficient than modern
+ZK-VMs.
 
 On the other hand, ZK-VMs are flexible and can be optimized for different tasks.
 They allow for developers to build software as if it was a regular piece of
 code. And for some specific use cases where performance is crucial, they can be
 augmented with _built-ins_, i.e. low-level optimized modules built to perform a
-given task. They work just like ZK-circuits, allowing specialized tasks to be
-processed much faster. This method gives ZK-VMs similar speed to custom-built
-circuits. Vitalik explains this further in his article on
+given task. These built-ins, or specialized opcodes work just like ZK-circuits,
+allowing specialized tasks to be processed much faster. This method gives ZK-VMs
+similar speed to custom-built circuits. Vitalik explains this further in his
+article on
 [Glue and coprocessor architectures](https://vitalik.eth.limo/general/2024/09/02/gluecp.html).
 
 We strongly believe that for nearly every use case, on the application or the
-infrastructure layer, ZK-VMs are far superior to ZK-circuits in every metric:
-speed of development, ease of maintenance, auditability, proof generation costs
-as well as surface for optimizations.
+infrastructure layer, ZK-VMs are superior to ZK-circuits in every metric: speed
+of development, ease of maintenance, auditability, proof generation costs as
+well as surface for optimizations.
 
 ## Why CairoVM?
 
@@ -56,7 +56,13 @@ However, we believe CairoVM has a decisive performance advantage over RISC-V
 based ZK-VMs. CairoVM’s design is more optimized for arithmetic operations while
 RISC-V is more suitable for bitwise operations. Given STARKs and most of the
 finite field cryptography exclusively utilize arithmetic operations, we believe
-CairoVM will keep yielding better performance in the long run.
+CairoVM will keep yielding better performance in the medium run.
+
+One key metric of field of ZK is the speed at which a team is able to prove
+existing software. For instance, how fast can a team use
+[revm](https://github.com/bluealloy/revm) - an open source implementation of the
+Ethereum execution engine - and make it provable. It is crucial for teams to be
+able to achieve this ZK transition in days.
 
 > Diagram - the advantages of building a provable EVM on top of an intermediary
 > ZK-VM:
@@ -86,13 +92,10 @@ The design choices we make here will give us the following advantages:
   specifications (in the event of hard forks). For example, we were able to
   rapidly adapt Kakarot’s core EVM to the Shanghai and Dencun hard forks in 2023
   and 2024 (completed in under two weeks of development for a team of two).
-  Additionally, building on CairoVM also makes Kakarot’s core EVM directly
-  embeddable in Starknet, Starkware’s Validity Rollup, thus making the network
-  EVM compatible.
 - **Efficient and performant:** building a core EVM in Cairo also means that
   Kakarot can continuously leverage the ever-improving cryptography and proof
   systems developed by Starkware. One example to this is the development of
-  their latest prover — Starkware STWO, which is expected to go live in Q1 2025.
+  their latest prover — Starkware STWO, which is expected to go live in Q2 2025.
   This new prover will bring significant improvements in performance, a
   magnitude of 1,000x compared to its predecessor, STARK One Prover (also known
   as Stone). Kakarot’s modularity has allowed itself to benefit from similar

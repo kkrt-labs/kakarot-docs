@@ -1,8 +1,8 @@
 {
-  "label": "Keth - EVM prover",
+  "label": "Keth - EVM Prover",
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "Introduce Provability of all EVM Execution in the Ethereum Ecosystem - Prove billions of EVM blocks"
+    "description": "Prove the Ethereum Protocol, in real-time."
   }
 }
