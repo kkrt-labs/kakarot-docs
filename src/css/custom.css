@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;200;300;400;500;600;700;800;900;1,100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --ifm-color-primary: #003d29;
